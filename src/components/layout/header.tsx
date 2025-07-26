@@ -13,8 +13,6 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/quienes-somos", label: "Quiénes Somos" },
-  { href: "/organizacion", label: "Organización" },
-  { href: "/grupos-de-trabajo", label: "Grupos de Trabajo" },
   { href: "/huerto", label: "Huerto"},
   { href: "/bicibus", label: "Bicibús"},
   { href: "/extraescolares", label: "Extraescolares" },

@@ -51,12 +51,11 @@ export default function Footer() {
             <h4 className="font-headline font-semibold mb-4">Enlaces de Interés</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/quienes-somos" className="hover:text-primary transition-colors">Quiénes Somos</Link></li>
-              <li><Link href="/organizacion" className="hover:text-primary transition-colors">Organización</Link></li>
-              <li><Link href="/grupos-de-trabajo" className="hover:text-primary transition-colors">Grupos de Trabajo</Link></li>
               <li><Link href="/huerto" className="hover:text-primary transition-colors">Huerto</Link></li>
                <li><Link href="/bicibus" className="hover:text-primary transition-colors">Bicibús</Link></li>
               <li><Link href="/extraescolares" className="hover:text-primary transition-colors">Extraescolares</Link></li>
               <li><Link href="/hazte-socio" className="hover:text-primary transition-colors">Hazte Socio</Link></li>
+              <li><Link href="/contacto" className="hover:text-primary transition-colors">Contacto</Link></li>
             </ul>
           </div>
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
