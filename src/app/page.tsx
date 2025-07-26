@@ -23,15 +23,17 @@ export default function Home() {
     <div className="flex flex-col">
        {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[70vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
-        <Image
-          src="/images/ampa-san-benito.png"
-          alt="Children playing in a schoolyard"
-          data-ai-hint="children schoolyard"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-primary/40 z-10" />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/ampa-san-benito.png"
+            alt="Children playing in a schoolyard"
+            data-ai-hint="children schoolyard"
+            fill
+            className="object-cover"
+            priority
+          />
+           <div className="absolute inset-0 bg-primary/70 z-10" />
+        </div>
         <div className="relative z-20 flex flex-col items-center">
           <div className="bg-white/90 rounded-full p-4 md:p-6 shadow-2xl mb-6">
             <Image

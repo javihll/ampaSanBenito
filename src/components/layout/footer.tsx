@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-secondary text-secondary-foreground border-t">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-4">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <School className="h-8 w-8 text-primary" />
               <span className="font-bold text-xl font-headline">AMPA San Benito</span>
@@ -39,7 +39,7 @@ export default function Footer() {
                 </Button>
             </div>
           </div>
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="font-headline font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
               <li>C/ Juan Pérez Zúñiga 36</li>
@@ -47,7 +47,7 @@ export default function Footer() {
               <li><a href="mailto:sanbenito@ampasanbenito.org" className="hover:text-primary transition-colors">sanbenito@ampasanbenito.org</a></li>
             </ul>
           </div>
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="font-headline font-semibold mb-4">Enlaces de Interés</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/quienes-somos" className="hover:text-primary transition-colors">Quiénes Somos</Link></li>
@@ -58,13 +58,13 @@ export default function Footer() {
               <li><Link href="/contacto" className="hover:text-primary transition-colors">Contacto</Link></li>
             </ul>
           </div>
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="font-headline font-semibold mb-4">Suscríbete</h4>
             <p className="text-sm mb-2">Recibe las últimas noticias y eventos en tu correo.</p>
-            <div className="flex w-full max-w-sm items-center space-x-2">
+            <form className="flex w-full max-w-sm items-center space-x-2">
               <Input type="email" placeholder="Email" className="bg-background"/>
               <Button type="submit" variant="default">Suscribir</Button>
-            </div>
+            </form>
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">

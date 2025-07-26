@@ -30,7 +30,24 @@ export default function Header() {
   }, []);
 
   if (!mounted) {
-    return null;
+    // Return a placeholder or null to avoid rendering on the server
+    // that doesn't match the client.
+    return (
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div className="container flex h-16 items-center justify-between">
+                <Link href="/" className="flex items-center gap-2">
+                   <Image
+                      src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
+                      alt="AMPA San Benito Logo"
+                      width={40}
+                      height={40}
+                      className="bg-primary rounded-full"
+                    />
+                  <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
+                </Link>
+            </div>
+        </header>
+    );
   }
   // End of block
 
@@ -52,7 +69,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 mr-4">
            <Image
               src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
               alt="AMPA San Benito Logo"
@@ -63,7 +80,7 @@ export default function Header() {
           <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
         </Link>
         
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-6 items-center flex-grow">
           {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
@@ -92,7 +109,7 @@ export default function Header() {
                 </Link>
               </Button>
           </div>
-          <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild className="hidden lg:flex bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/hazte-socio">Hazte Socio</Link>
           </Button>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
