@@ -30,19 +30,6 @@ export default function BicibusPage() {
                 <p>Así que si estáis interesados en participar uníos al grupo de whatsapp donde estaremos coordinando las diferentes paradas: <Link href="https://chat.whatsapp.com/EpiseuksJShAWoFMr4snDP" target="_blank" className="text-primary hover:underline">https://chat.whatsapp.com/EpiseuksJShAWoFMr4snDP</Link></p>
             </CardContent>
           </Card>
-
-          <Card className="overflow-hidden shadow-lg">
-            <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                    <Info className="h-8 w-8 text-primary" />
-                    <span>Ayúdanos a Mejorar</span>
-                </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-muted-foreground">
-                <p>Además, para animar a todos aquellos indecisos y cubrir las necesidades de los que aún no se sienten incluidos (por ser muy peques, no tener ruta, o cualquier otro motivo,…) hemos creado un cuestionario que nos ayudará a mejorar este maravilloso proyecto.</p>
-                <p>Tanto si ya has participado en años anteriores como si estás pensando en unirte, nos gustaría que contestaras a estas sencillas preguntas: <Link href="https://docs.google.com/forms/d/e/1FAIpQLSftdzfH1WRzlHYOyQz_pK9Kk3THAD8ZznlE_tJC-WlQgWIlsA/viewform" target="_blank" className="text-primary hover:underline">https://docs.google.com/forms/d/e/1FAIpQLSftdzfH1WRzlHYOyQz_pK9Kk3THAD8ZznlE_tJC-WlQgWIlsA/viewform</Link></p>
-            </CardContent>
-          </Card>
           
           <Card className="overflow-hidden shadow-lg">
              <CardHeader>
