@@ -1,13 +1,22 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calendar, Clock, MapPin, Users } from 'lucide-react';
+import { ArrowRight, Clock, MapPin } from 'lucide-react';
 import { announcements, events } from '@/lib/data';
+import { useState } from 'react';
 
 export default function Home() {
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
-  const recentAnnouncements = announcements.slice(0, 6);
+  const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
+
+  const showMoreAnnouncements = () => {
+    setVisibleAnnouncements(announcements.length);
+  };
+  
+  const recentAnnouncements = announcements.slice(0, visibleAnnouncements);
 
   return (
     <div className="flex flex-col">
@@ -41,6 +50,37 @@ export default function Home() {
           <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/hazte-socio">¡Hazte Socio!</Link>
           </Button>
+        </div>
+      </section>
+      
+        {/* Events Section */}
+      <section className="py-12 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Próximos Eventos</h2>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {upcomingEvents.map((event) => (
+              <Card key={event.id} className="flex flex-col md:flex-row items-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-4 w-full md:w-32 mb-4 md:mb-0 md:mr-6 text-center">
+                  <span className="text-4xl font-bold font-headline">{new Date(event.date).getDate()}</span>
+                  <span className="text-lg">{new Date(event.date).toLocaleString('es-ES', { month: 'short' })}</span>
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                  <h3 className="font-headline text-2xl font-semibold">{event.title}</h3>
+                  <p className="text-muted-foreground mt-1">{event.description}</p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-muted-foreground mt-3">
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4 text-accent" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-accent" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -77,43 +117,15 @@ export default function Home() {
             ))}
           </div>
            <div className="text-center mt-12">
-            <Button size="lg" variant="outline">
-              Ver entradas anteriores
-            </Button>
+            {visibleAnnouncements < announcements.length && (
+                <Button size="lg" variant="outline" onClick={showMoreAnnouncements}>
+                    Ver entradas anteriores
+                </Button>
+            )}
           </div>
         </div>
       </section>
 
-      {/* Events Section */}
-      <section className="py-12 md:py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Próximos Eventos</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            {upcomingEvents.map((event) => (
-              <Card key={event.id} className="flex flex-col md:flex-row items-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-4 w-full md:w-32 mb-4 md:mb-0 md:mr-6 text-center">
-                  <span className="text-4xl font-bold font-headline">{new Date(event.date).getDate()}</span>
-                  <span className="text-lg">{new Date(event.date).toLocaleString('es-ES', { month: 'short' })}</span>
-                </div>
-                <div className="flex-grow text-center md:text-left">
-                  <h3 className="font-headline text-2xl font-semibold">{event.title}</h3>
-                  <p className="text-muted-foreground mt-1">{event.description}</p>
-                  <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-muted-foreground mt-3">
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-accent" />
-                      <span>{event.time}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-accent" />
-                      <span>{event.location}</span>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
