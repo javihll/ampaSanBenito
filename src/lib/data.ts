@@ -3,6 +3,26 @@ import { BookOpen, Coffee, Gamepad2, GraduationCap, PartyPopper, Users, Utensils
 
 export const announcements: Announcement[] = [
   {
+    id: 10,
+    slug: 'ven-al-cole-en-bici-2024',
+    title: '¡VEN AL COLE EN BICI!',
+    excerpt: 'Desde el grupo de Movilidad del AMPA queremos reactivar el BICIBUS y ¡llegar pedaleando al cole este mismo viernes 11 de octubre!',
+    content: `
+<p>Buenos días familias,</p>
+<p>Desde el grupo de Movilidad del AMPA queremos reactivar el BICIBUS y ¡llegar pedaleando al cole este mismo viernes 11 de octubre!</p>
+<p>Así que si estáis interesados en participar uníos al grupo de whatsapp donde estaremos coordinando las diferentes paradas: <a href="https://chat.whatsapp.com/EpiseuksJShAWoFMr4snDP" target="_blank" class="text-primary hover:underline">https://chat.whatsapp.com/EpiseuksJShAWoFMr4snDP</a></p>
+<p>Además, para animar a todos aquellos indecisos y cubrir las necesidades de los que aún no se sienten incluidos (por ser muy peques, no tener ruta, o cualquier otro motivo,…) hemos creado un cuestionario que nos ayudará a mejorar este maravilloso proyecto.</p>
+<p>Tanto si ya has participado en años anteriores como si estás pensando en unirte, nos gustaría que contestaras a estas sencillas preguntas: <a href="https://docs.google.com/forms/d/e/1FAIpQLSftdzfH1WRzlHYOyQz_pK9Kk3THAD8ZznlE_tJC-WlQgWIlsA/viewform" target="_blank" class="text-primary hover:underline">https://docs.google.com/forms/d/e/1FAIpQLSftdzfH1WRzlHYOyQz_pK9Kk3THAD8ZznlE_tJC-WlQgWIlsA/viewform</a></p>
+<p>Para más información: <a href="https://ampasanbenito.org/2017/12/14/subete-con-tus-hijs-al-bici-bus-del-san-benito/" target="_blank" class="text-primary hover:underline">https://ampasanbenito.org/2017/12/14/subete-con-tus-hijs-al-bici-bus-del-san-benito/</a></p>
+<p>Y para más motivación: <a href="https://www.youtube.com/watch?si=NDN7F7BHEbTubtp9&v=YQc15uOfqdM&feature=youtu.be" target="_blank" class="text-primary hover:underline">https://www.youtube.com/watch?v=YQc15uOfqdM</a></p>
+<p>¡¡No olvidéis el casco, el chaleco este viernes!!</p>
+<p>¡OS ESPERAMOS A TODOS!</p>
+`,
+    imageUrl: 'https://placehold.co/600x400.png',
+    date: '8 de Octubre de 2024',
+    author: 'irenecazanaampa',
+  },
+  {
     id: 1,
     slug: 'fiesta-fin-de-curso-2024',
     title: '¡Gran Fiesta de Fin de Curso 2024!',
