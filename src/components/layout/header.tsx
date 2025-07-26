@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/anuncios", label: "Anuncios" },
   { href: "/eventos", label: "Eventos" },
   { href: "/servicios", label: "Servicios" },
+  { href: "https://ampasanbenito.org/actividades/", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -29,6 +30,8 @@ export default function Header() {
         pathname === href ? "text-primary" : "text-muted-foreground"
       )}
       onClick={() => setIsMobileMenuOpen(false)}
+      target={href.startsWith('http') ? '_blank' : undefined}
+      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
     >
       {label}
     </Link>
