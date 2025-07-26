@@ -13,9 +13,9 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/quienes-somos", label: "Quiénes Somos" },
+  { href: "/extraescolares", label: "Extraescolares" },
   { href: "/huerto", label: "Huerto"},
   { href: "/bicibus", label: "Bicibús"},
-  { href: "/extraescolares", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];
 
