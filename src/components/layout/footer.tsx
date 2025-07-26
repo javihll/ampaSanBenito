@@ -17,8 +17,10 @@ export default function Footer() {
               Asociación de Madres y Padres de Alumnos del CEIP San Benito.
             </p>
             <div className="flex space-x-4">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href="https://x.com/ampa_sanbenito" target="_blank">
                     <Twitter className="h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button variant="ghost" size="icon">
                     <Facebook className="h-5 w-5" />
