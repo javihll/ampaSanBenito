@@ -22,8 +22,10 @@ export default function Footer() {
                     <Twitter className="h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href="https://www.facebook.com/LaAmpadelSanBenito/" target="_blank">
                     <Facebook className="h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
                   <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
