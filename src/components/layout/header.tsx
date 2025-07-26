@@ -15,7 +15,6 @@ const navLinks = [
   { href: "/eventos", label: "Eventos" },
   { href: "/servicios", label: "Servicios" },
   { href: "/contacto", label: "Contacto" },
-  { href: "/hazte-socio", label: "Hazte Socio" },
 ];
 
 export default function Header() {
