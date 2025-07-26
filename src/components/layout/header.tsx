@@ -11,7 +11,6 @@ import { Menu, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/", label: "Inicio" },
   { href: "/quienes-somos", label: "Quiénes Somos" },
   { href: "/extraescolares", label: "Extraescolares" },
   { href: "/huerto", label: "Huerto"},
