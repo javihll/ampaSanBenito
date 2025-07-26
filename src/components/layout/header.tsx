@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -16,6 +16,7 @@ const navLinks = [
   { href: "/organizacion", label: "Organización" },
   { href: "/grupos-de-trabajo", label: "Grupos de Trabajo" },
   { href: "/huerto", label: "Huerto"},
+  { href: "/bicibus", label: "Bicibús"},
   { href: "/extraescolares", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -23,6 +24,17 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Add this block to fix hydration mismatch
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+  // End of block
 
   const NavLink = ({ href, label }: { href: string; label: string }) => (
     <Link
