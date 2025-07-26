@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground border-t">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <School className="h-8 w-8 text-primary" />
@@ -38,15 +38,6 @@ export default function Footer() {
                   </Link>
                 </Button>
             </div>
-          </div>
-          <div>
-            <h4 className="font-headline font-semibold mb-4">Navegación</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/anuncios" className="hover:text-primary transition-colors">Anuncios</Link></li>
-              <li><Link href="/eventos" className="hover:text-primary transition-colors">Eventos</Link></li>
-              <li><Link href="/servicios" className="hover:text-primary transition-colors">Servicios</Link></li>
-              <li><Link href="/contacto" className="hover:text-primary transition-colors">Contacto</Link></li>
-            </ul>
           </div>
           <div>
             <h4 className="font-headline font-semibold mb-4">Contacto</h4>
