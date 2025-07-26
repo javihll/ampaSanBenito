@@ -7,7 +7,7 @@ import { announcements, events, services } from '@/lib/data';
 
 export default function Home() {
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
-  const recentAnnouncements = announcements.slice(0, 3);
+  const recentAnnouncements = announcements.slice(0, 6);
 
   return (
     <div className="flex flex-col">
