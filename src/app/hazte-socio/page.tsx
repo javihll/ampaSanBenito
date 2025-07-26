@@ -33,7 +33,7 @@ export default function HazteSocioPage() {
                   Si tu familia aún no es socia de la asociación de familias del colegio, te animamos a darte de alta en el siguiente formulario de inscripción. Cuantas más seamos, más fuertes seremos y tendremos más capacidad para hacer y proponer mejoras y proyectos.
                 </p>
                 <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                   <Link href="#">Enlace al formulario de inscripción</Link>
+                   <Link href="https://docs.google.com/forms/d/e/1FAIpQLSen7Ld1voJBc34ywyz9yhu-hZ0a385OwsUkHZCRCjFuDZkaDw/viewform" target="_blank">Enlace al formulario de inscripción</Link>
                 </Button>
                  <p className="text-muted-foreground mt-4">
                   En el formulario dejad bien claro vuestras direcciones de correo, pues ese será el medio habitual de comunicación, e indicad vuestra disponibilidad para participar en alguno de los grupos de trabajo de la asociación. ¡¡Os animamos vivamente a hacerlo!!
