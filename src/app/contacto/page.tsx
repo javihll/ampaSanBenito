@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Mail, MapPin, Phone, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, MapPin, Phone, Twitter, Facebook, Instagram, Youtube, Users } from "lucide-react";
 
 export default function ContactoPage() {
   return (
