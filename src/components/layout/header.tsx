@@ -23,15 +23,27 @@ export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Add this block to fix hydration mismatch
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  const NavLink = ({ href, label }: { href: string; label: string }) => (
+    <Link
+      href={href}
+      className={cn(
+        "text-sm font-medium transition-colors hover:text-primary",
+        pathname === href ? "text-primary" : "text-muted-foreground"
+      )}
+      onClick={() => setIsMobileMenuOpen(false)}
+      target={href.startsWith('http') ? '_blank' : undefined}
+      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+    >
+      {label}
+    </Link>
+  );
+
   if (!mounted) {
-    // Return a placeholder or null to avoid rendering on the server
-    // that doesn't match the client.
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center justify-between">
@@ -49,22 +61,6 @@ export default function Header() {
         </header>
     );
   }
-  // End of block
-
-  const NavLink = ({ href, label }: { href: string; label: string }) => (
-    <Link
-      href={href}
-      className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary" : "text-muted-foreground"
-      )}
-      onClick={() => setIsMobileMenuOpen(false)}
-      target={href.startsWith('http') ? '_blank' : undefined}
-      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-    >
-      {label}
-    </Link>
-  );
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -80,13 +76,13 @@ export default function Header() {
           <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
         </Link>
         
-        <nav className="hidden md:flex gap-6 items-center flex-grow">
+        <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
 
-        <div className="flex items-center justify-end gap-2">
+        <div className="flex flex-1 items-center justify-end gap-2">
            <div className="hidden sm:flex space-x-1">
               <Button variant="ghost" size="icon" asChild>
                 <Link href="https://x.com/ampa_sanbenito" target="_blank">
