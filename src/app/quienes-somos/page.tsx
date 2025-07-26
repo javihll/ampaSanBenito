@@ -143,22 +143,22 @@ export default function QuienesSomosPage() {
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <HelpCircle className="h-8 w-8 text-primary" />
+                <HelpCircle className="h-6 w-6 text-primary" />
                 <span>¿Qué Hacemos?</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                     <p>Gestionamos las <strong>actividades extraescolares</strong> de manera gratuita, de forma que se abaratan las actividades. Esto hace posible el acceso a ellas de un mayor número de niños/as.</p>
                 </li>
                 <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                     <p>Intentamos solucionar problemas que puedan afectar a un colectivo de madres y padres. Por ejemplo: ¿Con quién dejamos a los niños/as si entramos a trabajar a las 8? Con sus compañeros/as en <strong>«Los Primeros del Cole»</strong>. ¿Y si en verano sigo saliendo a las 3 del trabajo? Pues organizamos la <strong>«Prolongación de jornada»</strong>. ¿Cómo nos podemos enterar de qué pasa con las leyes de educación? En una <strong>Asamblea extraordinaria</strong>.</p>
                 </li>
                 <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                     <p>Defendemos e intentamos, con todos los medios a nuestro alcance, mejorar la <strong>enseñanza pública</strong> porque creemos en ella. Lo público es de todos y todas.</p>
                 </li>
               </ul>
@@ -168,22 +168,22 @@ export default function QuienesSomosPage() {
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <Settings className="h-8 w-8 text-primary" />
+                <Settings className="h-6 w-6 text-primary" />
                 <span>¿Cómo Funcionamos?</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
                <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                     <p>Nos repartimos el trabajo a través de <strong>comisiones</strong>: cada padre o madre de la Junta Directiva asume llevar un tema.</p>
                 </li>
                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                     <p>Trabajamos a través de grupos de <strong>Whatsapp</strong> y nos reunimos al menos dos veces al año, todas las decisiones se toman democráticamente.</p>
                 </li>
                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                     <p>Hacemos al menos una <strong>asamblea ordinaria</strong> al año, y las que hagan falta extraordinarias, para informar a todos los padres y madres y que todos puedan decidir.</p>
                 </li>
                </ul>
@@ -193,22 +193,22 @@ export default function QuienesSomosPage() {
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <Heart className="h-8 w-8 text-primary" />
+                <Heart className="h-6 w-6 text-primary" />
                 <span>¿Por qué colaborar?</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
                  <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Para dar <strong>ejemplo a sus hijos/as</strong> de solidaridad y enseñarles los beneficios del trabajo en equipo.</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Para que sus hijos/as sientan el cole en casa y su <strong>casa en el cole</strong>, mientras ven cómo se preocupan sus papás y mamás de sus pequeños grandes problemas.</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Porque este es el mecanismo para poder <strong>decidir en muchos aspectos</strong> sobre la educación de los hijos/as en el colegio.</p>
                     </li>
                 </ul>
@@ -228,7 +228,7 @@ export default function QuienesSomosPage() {
              <Card className="overflow-hidden shadow-lg mb-12">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
-                    <Target className="h-8 w-8 text-primary" />
+                    <Target className="h-6 w-6 text-primary" />
                     <span>Planteamiento de Trabajo</span>
                   </CardTitle>
                 </CardHeader>
@@ -238,31 +238,31 @@ export default function QuienesSomosPage() {
                   </p>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Ser un punto de referencia claro para todos nuestros socios/as. Para ello se debe facilitar el acceso (correo electrónico, página web, buzón…) y las relaciones (acogida, escucha, buscar un buen contacto…)</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Asistir a los padres y madres en todo lo concerniente a la educación. Se debe INFORMAR, ASESORAR, APOYAR de forma clara, precisa y con datos o documentos pertinentes en todos los aspectos relativos a la dinámica educativa del centro escolar.</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>ACONSEJAR con sugerencias lo más adecuadas posibles.</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Debe haber un SEGUIMIENTO, una continuidad en la preocupación por las necesidades.</p>
                     </li>
                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Crear un entorno cómodo y agradable, un ambiente y un espacio que facilite las tareas que se desarrollan.</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Llevar a cabo actividades extraescolares que busquen el desarrollo global de la personalidad de nuestros hijos/as.</p>
                     </li>
                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p>Colaborar en la actividad educativa del Centro a través de sus relaciones con la Dirección, el profesorado y el Consejo Escolar.</p>
                     </li>
                   </ul>
@@ -271,30 +271,30 @@ export default function QuienesSomosPage() {
               <Card className="overflow-hidden shadow-lg mb-12">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
-                    <BarChart className="h-8 w-8 text-primary" />
+                    <BarChart className="h-6 w-6 text-primary" />
                     <span>Funciones y Organigrama</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                    <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p><strong>Presidencia:</strong> Representa a la Asociación y preside las reuniones de Junta y Asamblea.</p>
                     </li>
                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p><strong>Vicepresidencia:</strong> Sustituye a la Presidencia.</p>
                     </li>
                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p><strong>Secretaría:</strong> Custodia los libros oficiales de la Asociación y levanta acta de reuniones y asambleas.</p>
                     </li>
                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p><strong>Tesorería:</strong> Responsable de las finanzas de la Asociación y elabora el presupuesto anual.</p>
                     </li>
                     <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-1 text-accent" />
+                        <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-accent" />
                         <p><strong>Vocalías:</strong> Tienen las responsabilidades que le encomiende la Junta Directiva. Se encargan, por ejemplo, de cuidar alguna de las actividades extraescolares; de organizar actividades culturales; de mantener el contacto con la FAPA Giner de los Ríos…</p>
                     </li>
                    </ul>
@@ -325,7 +325,7 @@ export default function QuienesSomosPage() {
               <Card className="overflow-hidden shadow-lg">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
-                    <Users className="h-8 w-8 text-primary" />
+                    <Users className="h-6 w-6 text-primary" />
                     <span>Nuestros Equipos</span>
                   </CardTitle>
                 </CardHeader>
@@ -356,7 +356,7 @@ export default function QuienesSomosPage() {
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <Mail className="h-8 w-8 text-primary" />
+                <Mail className="h-6 w-6 text-primary" />
                 <span>¿Cómo Contactar?</span>
               </CardTitle>
             </CardHeader>
