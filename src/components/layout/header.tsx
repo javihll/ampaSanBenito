@@ -1,0 +1,93 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, School } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/anuncios", label: "Anuncios" },
+  { href: "/eventos", label: "Eventos" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/contacto", label: "Contacto" },
+];
+
+export default function Header() {
+  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const NavLink = ({ href, label }: { href: string; label: string }) => (
+    <Link
+      href={href}
+      className={cn(
+        "text-sm font-medium transition-colors hover:text-primary",
+        pathname === href ? "text-primary" : "text-muted-foreground"
+      )}
+      onClick={() => setIsMobileMenuOpen(false)}
+    >
+      {label}
+    </Link>
+  );
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center">
+        <Link href="/" className="mr-6 flex items-center gap-2">
+           <Image
+              src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
+              alt="AMPA San Benito Logo"
+              width={40}
+              height={40}
+              className="bg-primary rounded-full"
+            />
+          <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
+        </Link>
+        <nav className="hidden md:flex gap-6 flex-1">
+          {navLinks.map((link) => (
+            <NavLink key={link.href} {...link} />
+          ))}
+        </nav>
+        <div className="flex flex-1 items-center justify-end gap-4">
+          <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
+            <Link href="#">Hazte Socio</Link>
+          </Button>
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Abrir menú</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <div className="flex flex-col gap-6 p-6">
+                <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                   <Image
+                      src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
+                      alt="AMPA San Benito Logo"
+                      width={40}
+                      height={40}
+                      className="bg-primary rounded-full"
+                    />
+                  <span className="font-bold font-headline">AMPA San Benito</span>
+                </Link>
+                <nav className="flex flex-col gap-4">
+                    {navLinks.map((link) => (
+                        <NavLink key={link.href} {...link} />
+                    ))}
+                </nav>
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Link href="#">Hazte Socio</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
+}
