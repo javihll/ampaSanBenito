@@ -20,12 +20,6 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
 
   const NavLink = ({ href, label }: { href: string; label: string }) => (
     <Link
@@ -54,7 +48,7 @@ export default function Header() {
           <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
         </Link>
         <nav className="hidden md:flex gap-6 flex-1">
-          {isClient && navLinks.map((link) => (
+          {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
@@ -82,7 +76,7 @@ export default function Header() {
                   <span className="font-bold font-headline">AMPA San Benito</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
-                    {isClient && navLinks.map((link) => (
+                    {navLinks.map((link) => (
                         <NavLink key={link.href} {...link} />
                     ))}
                 </nav>
