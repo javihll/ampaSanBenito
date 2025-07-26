@@ -100,7 +100,7 @@ export default function OrganizacionPage() {
             <AlertTitle className="text-accent font-bold">Estatutos AMPA San Benito</AlertTitle>
             <AlertDescription>
                 <Button asChild variant="link" className="p-0 h-auto mt-2">
-                    <Link href="https://ampasanbenito.org/wp-content/uploads/2019/04/estatutos-ampa-san-benito.pdf" target="_blank">
+                    <Link href="https://ampasanbenito.org/wp-content/uploads/2011/05/estatutos-ampa-san-benito.pdf" target="_blank">
                         Consulta aquí los estatutos completos de la asociación.
                     </Link>
                 </Button>
