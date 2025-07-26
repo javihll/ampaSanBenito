@@ -6,25 +6,33 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
 import { announcements, events } from '@/lib/data';
+import { useState } from 'react';
 
 export default function Home() {
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
-  const recentAnnouncements = announcements.slice(0, 6);
+  const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
+
+  const handleShowMore = () => {
+    setVisibleAnnouncements(announcements.length);
+  };
+  
+  const recentAnnouncements = announcements.slice(0, visibleAnnouncements);
+
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] bg-gradient-to-br from-primary to-green-700 text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section className="relative w-full h-[60vh] md:h-[70vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
+        <div className="absolute inset-0 bg-primary/40 z-10"></div>
         <Image
           src="/images/ampa-san-benito.png"
           alt="Children playing in a schoolyard"
           data-ai-hint="children schoolyard"
           fill
-          className="object-cover z-0"
+          className="object-cover"
           priority
         />
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-20 flex flex-col items-center">
           <div className="bg-white/90 rounded-full p-4 md:p-6 shadow-2xl mb-6">
             <Image
               src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
