@@ -3,10 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, School } from "lucide-react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -20,6 +20,12 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   const NavLink = ({ href, label }: { href: string; label: string }) => (
     <Link
@@ -48,11 +54,11 @@ export default function Header() {
           <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
         </Link>
         <nav className="hidden md:flex gap-6 flex-1">
-            {navLinks.map((link) => (
-                <NavLink key={link.href} {...link} />
-            ))}
+          {isClient && navLinks.map((link) => (
+            <NavLink key={link.href} {...link} />
+          ))}
         </nav>
-        <div className="flex items-center justify-end gap-4 md:flex-grow-0 flex-1">
+        <div className="flex flex-1 items-center justify-end gap-4">
           <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/hazte-socio">Hazte Socio</Link>
           </Button>
@@ -76,11 +82,11 @@ export default function Header() {
                   <span className="font-bold font-headline">AMPA San Benito</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
-                    {navLinks.map((link) => (
+                    {isClient && navLinks.map((link) => (
                         <NavLink key={link.href} {...link} />
                     ))}
                 </nav>
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setIsMobileMenuOpen(false)}>
                     <Link href="/hazte-socio">Hazte Socio</Link>
                 </Button>
               </div>
