@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/anuncios", label: "Anuncios" },
   { href: "/eventos", label: "Eventos" },
   { href: "/servicios", label: "Servicios" },
-  { href: "https://ampasanbenito.org/actividades/", label: "Extraescolares" },
+  { href: "/extraescolares", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];
 
