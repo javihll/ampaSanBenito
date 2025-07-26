@@ -49,22 +49,12 @@ export default function ExtraescolaresPage() {
                     <span>Cuadro de Actividades y Ficha de Inscripción</span>
                 </CardTitle>
                 <CardDescription>
-                    Pinchando en la siguiente imagen podéis descargar el PDF con el cuadro de actividades extraescolares para el curso 2023-2024 y la ficha de inscripción.
+                    Pinchando en el siguiente botón podéis descargar el PDF con el cuadro de actividades extraescolares para el curso 2023-2024 y la ficha de inscripción.
                 </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col items-center gap-6">
-                <Link href="https://ampasanbenito.org/wp-content/uploads/2023/09/OFERTA-DE-ACTIVIDADES-EXTRAESCOLARES-SAN-BENITO-23-24.pdf" target="_blank">
-                    <Image
-                        src="https://ampasanbenito.org/wp-content/uploads/2023/09/OFERTA-DE-ACTIVIDADES-EXTRAESCOLARES-SAN-BENITO-23-24-724x1024.jpg"
-                        alt="Cuadro de Actividades Extraescolares"
-                        data-ai-hint="schedule document"
-                        width={600}
-                        height={849}
-                        className="rounded-lg border shadow-md hover:opacity-90 transition-opacity"
-                    />
-                </Link>
                 <Button asChild>
-                    <Link href="https://ampasanbenito.org/wp-content/uploads/2023/09/OFERTA-DE-ACTIVIDADES-EXTRAESCOLARES-SAN-BENITO-23-24.pdf" target="_blank">
+                    <Link href="https://drive.google.com/file/d/1LLWHtzxj4R6yZkUH1FNvVe5yXnLLhfQs/view" target="_blank">
                         <Download className="mr-2 h-4 w-4"/>
                         Descargar PDF
                     </Link>
