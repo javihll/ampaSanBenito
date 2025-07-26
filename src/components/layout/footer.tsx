@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { School, Twitter, Facebook, Instagram } from "lucide-react";
+import { School, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -30,6 +30,11 @@ export default function Footer() {
                 <Button variant="ghost" size="icon" asChild>
                   <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
                     <Instagram className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href="https://www.youtube.com/channel/UCjeRvtuFfZeA_qSgB82Pwng/featured" target="_blank">
+                    <Youtube className="h-5 w-5" />
                   </Link>
                 </Button>
             </div>
