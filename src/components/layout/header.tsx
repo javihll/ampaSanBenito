@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
+  { href: "/quienes-somos", label: "Quiénes Somos" },
   { href: "/anuncios", label: "Anuncios" },
   { href: "/eventos", label: "Eventos" },
   { href: "/servicios", label: "Servicios" },
