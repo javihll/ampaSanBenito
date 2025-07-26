@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -12,9 +12,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/quienes-somos", label: "Quiénes Somos" },
-  { href: "/anuncios", label: "Anuncios" },
-  { href: "/eventos", label: "Eventos" },
-  { href: "/servicios", label: "Servicios" },
+  { href: "/organizacion", label: "Organización" },
   { href: "/extraescolares", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -22,6 +20,11 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const NavLink = ({ href, label }: { href: string; label: string }) => (
     <Link
