@@ -23,8 +23,10 @@ export default function Footer() {
                 <Button variant="ghost" size="icon">
                     <Facebook className="h-5 w-5" />
                 </Button>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
                     <Instagram className="h-5 w-5" />
+                  </Link>
                 </Button>
             </div>
           </div>
