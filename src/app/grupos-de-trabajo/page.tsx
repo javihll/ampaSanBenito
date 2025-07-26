@@ -1,6 +1,8 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Sprout, Heart, Milestone, Drama, Palmtree, Gamepad2, ShieldCheck, Paintbrush, Network, Thermometer, UserCog } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const workGroups = [
   {
@@ -36,7 +38,32 @@ const workGroups = [
   {
     icon: Gamepad2,
     title: "Familias jugonas",
-    content: "Para todas las familias con niñas y niños de cualquier edad, que tengan ganas de divertirse y participar en Juegos de Mesa. Nuestro objetivo es reunirnos un viernes al mes por la tarde para jugar todos juntos. Se pueden llevar juegos de casa para compartir. La actividad se realiza un viernes al mes a las 16:00 o a las 17:00 en el comedor del colegio, y se puede llevar la merienda. Se ha creado una ludoteca para que pueda ser usada por las familias. Para apuntaros, rellenad el formulario para incluiros en el grupo de WhatsApp. Responsable del grupo: Begoña",
+    content: (
+        <div className="space-y-4">
+            <p>
+                Para todas las familias con niñas y niños de cualquier edad, que tengan ganas de divertirse y participar en Juegos de Mesa.
+            </p>
+            <p>
+                Nuestro objetivo es reunirnos un viernes al mes por la tarde: niñas, niños, madres, padres, abuelos, y así jugar todos juntos, compartir y fomentar estos juegos como una alternativa de ocio en familia.
+            </p>
+            <p>
+                Se pueden llevar juegos que cada uno tengamos en nuestra casa. Los compartiremos y cuidaremos entre todos el tiempo que estemos allí y después cada uno se los volverá a llevar a casa.
+            </p>
+            <div>
+                <h4 className="font-semibold">CUÁNDO</h4>
+                <p>
+                    La actividad se realiza un viernes al mes a las 16:00 o a las 17:00 en el comedor del colegio. Y se puede llevar la merienda para tomarla allí.
+                </p>
+            </div>
+            <p className="font-semibold">¡Apuntaros a la diversión!</p>
+            <p>
+                Sólo tenéis que rellenar este <Link href="https://docs.google.com/forms/d/e/1FAIpQLScb7jnHKahKWlt5mtHuX3lYdKrYC67tIILqE2Nr05MTXxBjmQ/viewform" target="_blank" className="text-primary hover:underline">formulario (click aquí)</Link> para que tengamos vuestros datos y os podamos incluir en el grupo de WhatsApp de organización de las quedadas.
+            </p>
+             <p>
+                Si os animáis, y puesto que esto va de juegos… os enlazamos también las instrucciones para las quedadas: <Link href="https://gallery.mailchimp.com/4b64ed96651ad4be17f76ef76/files/b17be716-89d4-438b-8ae5-8ead7ffc6272/Libro_de_Instrucciones_Club_Familias_Jugonas.pdf" target="_blank" className="text-primary hover:underline">descargar instrucciones</Link>.
+            </p>
+        </div>
+    )
   },
   {
     icon: ShieldCheck,
@@ -97,7 +124,11 @@ export default function GruposDeTrabajoPage() {
                                 </div>
                             </AccordionTrigger>
                             <AccordionContent className="pl-12 text-muted-foreground">
-                                {group.content}
+                                {typeof group.content === 'string' ? (
+                                    <p>{group.content}</p>
+                                ) : (
+                                    group.content
+                                )}
                             </AccordionContent>
                         </AccordionItem>
                     ))}
