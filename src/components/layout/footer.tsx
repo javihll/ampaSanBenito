@@ -52,9 +52,9 @@ export default function Footer() {
           <div>
             <h4 className="font-headline font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
-              <li>CEIP San Benito</li>
-              <li>C. de San Benito, 2, 28029 Madrid</li>
-              <li><a href="mailto:info@ampasanbenito.org" className="hover:text-primary transition-colors">info@ampasanbenito.org</a></li>
+              <li>C/ Juan Pérez Zúñiga 36</li>
+              <li>28027 Madrid</li>
+              <li><a href="mailto:sanbenito@ampasanbenito.org" className="hover:text-primary transition-colors">sanbenito@ampasanbenito.org</a></li>
             </ul>
           </div>
           <div>
