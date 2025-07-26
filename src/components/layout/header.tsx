@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -67,7 +67,29 @@ export default function Header() {
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-4">
+        <div className="flex flex-1 items-center justify-end gap-2">
+           <div className="hidden sm:flex space-x-1">
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://x.com/ampa_sanbenito" target="_blank">
+                  <Twitter className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://www.facebook.com/LaAmpadelSanBenito/" target="_blank">
+                  <Facebook className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
+                  <Instagram className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://www.youtube.com/channel/UCjeRvtuFfZeA_qSgB82Pwng/featured" target="_blank">
+                  <Youtube className="h-5 w-5" />
+                </Link>
+              </Button>
+          </div>
           <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/hazte-socio">Hazte Socio</Link>
           </Button>
@@ -98,6 +120,28 @@ export default function Header() {
                 <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setIsMobileMenuOpen(false)}>
                     <Link href="/hazte-socio">Hazte Socio</Link>
                 </Button>
+                <div className="flex justify-center space-x-2 border-t pt-6">
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href="https://x.com/ampa_sanbenito" target="_blank">
+                        <Twitter className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href="https://www.facebook.com/LaAmpadelSanBenito/" target="_blank">
+                        <Facebook className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
+                        <Instagram className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href="https://www.youtube.com/channel/UCjeRvtuFfZeA_qSgB82Pwng/featured" target="_blank">
+                        <Youtube className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
