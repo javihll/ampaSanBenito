@@ -36,7 +36,7 @@ const workGroups = [
   {
     icon: Gamepad2,
     title: "Familias jugonas",
-    content: "Actividad que se desarrolla algunos viernes por la tarde, normalmente una vez al mes y en las que las familias comparten una tarde de juegos de mesa en el comedor del cole. Se ha creado una ludoteca para que pueda ser usada por las familias que acudan a pasar una divertida tarde de juegos alternativos. Responsable del grupo: Begoña",
+    content: "Para todas las familias con niñas y niños de cualquier edad, que tengan ganas de divertirse y participar en Juegos de Mesa. Nuestro objetivo es reunirnos un viernes al mes por la tarde para jugar todos juntos. Se pueden llevar juegos de casa para compartir. La actividad se realiza un viernes al mes a las 16:00 o a las 17:00 en el comedor del colegio, y se puede llevar la merienda. Se ha creado una ludoteca para que pueda ser usada por las familias. Para apuntaros, rellenad el formulario para incluiros en el grupo de WhatsApp. Responsable del grupo: Begoña",
   },
   {
     icon: ShieldCheck,
