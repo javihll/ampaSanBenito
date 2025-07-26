@@ -1,9 +1,10 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -14,6 +15,7 @@ const navLinks = [
   { href: "/quienes-somos", label: "Quiénes Somos" },
   { href: "/organizacion", label: "Organización" },
   { href: "/grupos-de-trabajo", label: "Grupos de Trabajo" },
+  { href: "/huerto", label: "Huerto"},
   { href: "/extraescolares", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];

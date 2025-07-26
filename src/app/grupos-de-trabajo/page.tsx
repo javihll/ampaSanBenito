@@ -23,7 +23,30 @@ const workGroups = [
   {
     icon: Palmtree,
     title: "Grupo del huerto",
-    content: "La Ampa financia parte de las actividades que se desarrollan en el huerto, se organizan talleres con las familias, se realizan visitas a otros huertos y todas las clases pasan por el huerto periódicamente. Responsable del grupo: Saray",
+    content: (
+        <div className="space-y-4">
+            <p>
+                La Ampa financia parte de las actividades que se desarrollan en el huerto, se organizan talleres con las familias, se realizan visitas a otros huertos y todas las clases pasan por el huerto periódicamente. Queremos que el Huerto del San Benito sea un espacio abierto para todas las familias.
+            </p>
+            <p>
+                Un espacio en el que se fomenta no solo la educación medioambiental, sino también los valores como el trabajo en equipo, la constancia, el esfuerzo y la creatividad. ¡Qué más podemos pedir!.
+            </p>
+            <p>
+                Por ello, un viernes al mes dedicamos un ratito a este espacio del colegio tan especial para todos los niños y niñas. Para acondicionarlo, cuidarlo y entre todas y todos ¡dejar el huerto aún más bonito!.
+            </p>
+            <p>
+                ¡Anímate a participar en familia y ven a disfrutar de un viernes hortelano juntos!.
+            </p>
+            <p>
+                Responsable del grupo: Saray
+            </p>
+             <Button asChild variant="link" className="p-0 h-auto">
+                <Link href="/huerto" className="font-semibold">
+                    Picha aquí para más info de nuestro querido huerto.
+                </Link>
+            </Button>
+        </div>
+    )
   },
   {
     icon: Drama,
@@ -41,10 +64,7 @@ const workGroups = [
     content: (
         <div className="space-y-4">
             <p>
-                Para todas las familias con niñas y niños de cualquier edad, que tengan ganas de divertirse y participar en Juegos de Mesa.
-            </p>
-            <p>
-                Nuestro objetivo es reunirnos un viernes al mes por la tarde: niñas, niños, madres, padres, abuelos, y así jugar todos juntos, compartir y fomentar estos juegos como una alternativa de ocio en familia.
+                Para todas las familias con niñas y niños de cualquier edad, que tengan ganas de divertirse y participar en Juegos de Mesa. Nuestro objetivo es reunirnos un viernes al mes por la tarde: niñas, niños, madres, padres, abuelos, y así jugar todos juntos, compartir y fomentar estos juegos como una alternativa de ocio en familia.
             </p>
             <p>
                 Se pueden llevar juegos que cada uno tengamos en nuestra casa. Los compartiremos y cuidaremos entre todos el tiempo que estemos allí y después cada uno se los volverá a llevar a casa.
@@ -62,6 +82,7 @@ const workGroups = [
              <p>
                 Si os animáis, y puesto que esto va de juegos… os enlazamos también las instrucciones para las quedadas: <Link href="https://gallery.mailchimp.com/4b64ed96651ad4be17f76ef76/files/b17be716-89d4-438b-8ae5-8ead7ffc6272/Libro_de_Instrucciones_Club_Familias_Jugonas.pdf" target="_blank" className="text-primary hover:underline">descargar instrucciones</Link>.
             </p>
+            <p>Responsable del grupo: Begoña</p>
         </div>
     )
   },
