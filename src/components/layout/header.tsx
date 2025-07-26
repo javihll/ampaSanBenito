@@ -37,7 +37,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center gap-2 flex-1">
+        <Link href="/" className="mr-6 flex items-center gap-2">
            <Image
               src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
               alt="AMPA San Benito Logo"
@@ -47,7 +47,12 @@ export default function Header() {
             />
           <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
         </Link>
-        <div className="flex flex-1 items-center justify-end gap-4">
+        <nav className="hidden md:flex gap-6 flex-1">
+            {navLinks.map((link) => (
+                <NavLink key={link.href} {...link} />
+            ))}
+        </nav>
+        <div className="flex items-center justify-end gap-4 md:flex-grow-0 flex-1">
           <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/hazte-socio">Hazte Socio</Link>
           </Button>
