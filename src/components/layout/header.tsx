@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/quienes-somos", label: "Quiénes Somos" },
   { href: "/organizacion", label: "Organización" },
+  { href: "/grupos-de-trabajo", label: "Grupos de Trabajo" },
   { href: "/extraescolares", label: "Extraescolares" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -20,11 +21,6 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const NavLink = ({ href, label }: { href: string; label: string }) => (
     <Link

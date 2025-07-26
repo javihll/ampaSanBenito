@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-secondary text-secondary-foreground border-t">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="space-y-4 flex flex-col items-center text-center md:items-start md:text-left">
             <Link href="/" className="flex items-center gap-2">
               <School className="h-8 w-8 text-primary" />
               <span className="font-bold text-xl font-headline">AMPA San Benito</span>
@@ -39,7 +39,7 @@ export default function Footer() {
                 </Button>
             </div>
           </div>
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h4 className="font-headline font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
               <li>C/ Juan Pérez Zúñiga 36</li>
@@ -47,16 +47,17 @@ export default function Footer() {
               <li><a href="mailto:sanbenito@ampasanbenito.org" className="hover:text-primary transition-colors">sanbenito@ampasanbenito.org</a></li>
             </ul>
           </div>
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h4 className="font-headline font-semibold mb-4">Enlaces de Interés</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/quienes-somos" className="hover:text-primary transition-colors">Quiénes Somos</Link></li>
               <li><Link href="/organizacion" className="hover:text-primary transition-colors">Organización</Link></li>
+              <li><Link href="/grupos-de-trabajo" className="hover:text-primary transition-colors">Grupos de Trabajo</Link></li>
               <li><Link href="/extraescolares" className="hover:text-primary transition-colors">Extraescolares</Link></li>
               <li><Link href="/hazte-socio" className="hover:text-primary transition-colors">Hazte Socio</Link></li>
             </ul>
           </div>
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h4 className="font-headline font-semibold mb-4">Suscríbete</h4>
             <p className="text-sm mb-2">Recibe las últimas noticias y eventos en tu correo.</p>
             <div className="flex w-full max-w-sm items-center space-x-2">
