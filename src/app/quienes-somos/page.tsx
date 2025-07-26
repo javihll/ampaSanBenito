@@ -57,7 +57,16 @@ const workGroups = [
   {
     icon: Milestone,
     title: "Grupo de movilidad",
-    content: "Se ha conseguido la peatonalización de la calle Mariano Díaz, los pasos de peatones en las dos entradas de infantil, los aparcabicis. Somos miembros de la revuelta escolar. Pero la actividad estrella es, sin duda, el Bicibús de los viernes (más información en la web). Responsable del grupo: Rubén y Bubi",
+    content: (
+        <div className="space-y-2">
+            <p>Se ha conseguido la peatonalización de la calle Mariano Díaz, los pasos de peatones en las dos entradas de infantil, los aparcabicis. Somos miembros de la revuelta escolar. Pero la actividad estrella es, sin duda, el Bicibús de los viernes. Responsable del grupo: Rubén y Bubi.</p>
+            <Button asChild variant="link" className="p-0 h-auto">
+                <Link href="/bicibus" className="font-semibold">
+                    Más información del Bicibús aquí.
+                </Link>
+            </Button>
+        </div>
+    )
   },
   {
     icon: Gamepad2,
