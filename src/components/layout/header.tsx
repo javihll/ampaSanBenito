@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/eventos", label: "Eventos" },
   { href: "/servicios", label: "Servicios" },
   { href: "/contacto", label: "Contacto" },
+  { href: "/hazte-socio", label: "Hazte Socio" },
 ];
 
 export default function Header() {
@@ -54,7 +55,7 @@ export default function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#">Hazte Socio</Link>
+            <Link href="/hazte-socio">Hazte Socio</Link>
           </Button>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -81,7 +82,7 @@ export default function Header() {
                     ))}
                 </nav>
                 <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="#">Hazte Socio</Link>
+                    <Link href="/hazte-socio">Hazte Socio</Link>
                 </Button>
               </div>
             </SheetContent>

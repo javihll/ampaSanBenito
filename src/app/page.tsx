@@ -39,7 +39,7 @@ export default function Home() {
             Trabajando juntos por la educación y el bienestar de nuestros hijos.
           </p>
           <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#">¡Hazte Socio!</Link>
+            <Link href="/hazte-socio">¡Hazte Socio!</Link>
           </Button>
         </div>
       </section>
