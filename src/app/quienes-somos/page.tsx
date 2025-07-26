@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Users, HelpCircle, Settings, Heart, Mail, CheckCircle, ListChecks, Target, BookOpen, Handshake, BarChart, Sprout, Milestone, Drama, Palmtree, Gamepad2, ShieldCheck, Paintbrush, Network, Thermometer, UserCog } from "lucide-react";
+import { Users, HelpCircle, Settings, Heart, Mail, CheckCircle, ListChecks, Target, BookOpen, Handshake, BarChart, Sprout, Milestone, Drama, Palmtree, Gamepad2, ShieldCheck, Paintbrush, Network, Thermometer, UserCog, Info } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const workGroups = [
@@ -59,12 +59,13 @@ const workGroups = [
     title: "Grupo de movilidad",
     content: (
         <div className="space-y-2">
-            <p>Se ha conseguido la peatonalización de la calle Mariano Díaz, los pasos de peatones en las dos entradas de infantil, los aparcabicis. Somos miembros de la revuelta escolar. Pero la actividad estrella es, sin duda, el Bicibús de los viernes. Responsable del grupo: Rubén y Bubi.</p>
+            <p>Se ha conseguido la peatonalización de la calle Mariano Díaz, los pasos de peatones en las dos entradas de infantil, los aparcabicis. Somos miembros de la revuelta escolar. Pero la actividad estrella es, sin duda, el Bicibús de los viernes.</p>
             <Button asChild variant="link" className="p-0 h-auto">
                 <Link href="/bicibus" className="font-semibold">
                     Más información del Bicibús aquí.
                 </Link>
             </Button>
+            <p>Responsable del grupo: Rubén y Bubi.</p>
         </div>
     )
   },
@@ -139,6 +140,26 @@ export default function QuienesSomosPage() {
               La Junta Directiva del AMPA, o sea, las madres y padres que hablan con vosotros/as por algún tema de las extraescolares, o ponen los carteles informativos en el tablón, o hacen mudanza para rehabilitar un aula de extraescolares, o están en contacto directo con el «cole», somos mamás y papás voluntarios.
             </p>
           </header>
+
+          <Card className="overflow-hidden shadow-lg">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3">
+                <Info className="h-6 w-6 text-primary" />
+                <span>¿Qué es el AMPA?</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground">
+                <p>Hola familias,</p>
+                <p>Ya estamos otro año en fechas de las Jornadas de puertas abiertas en el colegio.</p>
+                <p>Para todas aquellas familias que sereis nuevas o las que ya estais, pero no conoceis todo lo que se hace dentro del AMPA, os traemos esta información para que podais conocer más de este grupo de padres y madres que trabajan duro para mejorar y dinamizar nuestro colegio.</p>
+                <Button asChild variant="link" className="p-0 h-auto">
+                    <Link href="https://ampasanbenito.org/wp-content/uploads/2024/03/folleto-diptico-que-es-el-ampa-del-cole-1.pdf" target="_blank">
+                        Haz clic para acceder al folleto
+                    </Link>
+                </Button>
+                <p className="font-semibold">¡No os quedeis con las ganas y entrar a formar parte de nuestra AMPA!!</p>
+            </CardContent>
+          </Card>
 
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
