@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground border-t">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <School className="h-8 w-8 text-primary" />
