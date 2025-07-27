@@ -1,7 +1,9 @@
+'use server';
+
 import {ai} from '../genkit';
 import {z} from 'zod';
 
-export const summarize = ai.flow(
+export const summarize = ai.defineFlow(
   {
     name: 'summarize',
     inputSchema: z.string(),
@@ -15,6 +17,6 @@ export const summarize = ai.flow(
         temperature: 0.5,
       }
     });
-    return llmResponse.text();
+    return llmResponse.text;
   }
 );
