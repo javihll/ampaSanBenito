@@ -18,7 +18,7 @@ export const announcements: Announcement[] = [
 <p>¡OS ESPERAMOS!</p>
 <p>Grupo de Movilidad</p>
 `,
-    imageUrl: '/images/noticias/bicibus-navideno.jpeg',
+    imageUrl: 'https://ampasanbenito.org/wp-content/uploads/2023/12/Cartel-bicibus-navideno-solidario_page-0001.jpg',
     date: '15 de Diciembre de 2023',
     author: 'irenecazanaampa',
   },
