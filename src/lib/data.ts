@@ -1,3 +1,4 @@
+
 import type { Announcement, Event, Service } from './types';
 import { BookOpen, Coffee, Gamepad2, GraduationCap, PartyPopper, Users, Utensils } from 'lucide-react';
 
