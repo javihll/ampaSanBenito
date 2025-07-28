@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Bike, FileText, Info } from "lucide-react";
+import Image from "next/image";
 
 export default function BicibusPage() {
   return (
@@ -16,6 +17,17 @@ export default function BicibusPage() {
              Desde el grupo de Movilidad del AMPA queremos reactivar el BICIBUS.
             </p>
           </header>
+
+          <div className="my-8">
+            <Image
+              src="/images/pages/bicibus2.webp"
+              alt="Niños y padres en el bicibús"
+              data-ai-hint="children cycling"
+              width={1200}
+              height={675}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
 
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
