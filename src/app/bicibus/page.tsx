@@ -25,7 +25,7 @@ export default function BicibusPage() {
               data-ai-hint="children cycling"
               width={900}
               height={506}
-              className="w-1/4 h-auto rounded-lg shadow-lg"
+              className="w-2/5 h-auto rounded-lg shadow-lg"
             />
           </div>
 
