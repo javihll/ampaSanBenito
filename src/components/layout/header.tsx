@@ -31,8 +31,8 @@ export default function Header() {
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary" : "text-muted-foreground"
+        "text-base font-semibold transition-colors hover:text-primary",
+        pathname === href ? "text-primary" : "text-foreground"
       )}
       onClick={() => setIsMobileMenuOpen(false)}
       target={href.startsWith('http') ? '_blank' : undefined}
@@ -85,22 +85,22 @@ export default function Header() {
            <div className="hidden sm:flex space-x-1">
               <Button variant="ghost" size="icon" asChild>
                 <Link href="https://x.com/ampa_sanbenito" target="_blank">
-                  <Twitter className="h-5 w-5" />
+                  <Twitter className="h-6 w-6" />
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.facebook.com/LaAmpadelSanBenito/" target="_blank">
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-6 w-6" />
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-6 w-6" />
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.youtube.com/channel/UCjeRvtuFfZeA_qSgB82Pwng/featured" target="_blank">
-                  <Youtube className="h-5 w-5" />
+                  <Youtube className="h-6 w-6" />
                 </Link>
               </Button>
           </div>
@@ -137,22 +137,22 @@ export default function Header() {
                 <div className="flex justify-center space-x-2 border-t pt-6">
                     <Button variant="ghost" size="icon" asChild>
                       <Link href="https://x.com/ampa_sanbenito" target="_blank">
-                        <Twitter className="h-5 w-5" />
+                        <Twitter className="h-6 w-6" />
                       </Link>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                       <Link href="https://www.facebook.com/LaAmpadelSanBenito/" target="_blank">
-                        <Facebook className="h-5 w-5" />
+                        <Facebook className="h-6 w-6" />
                       </Link>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                       <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
-                        <Instagram className="h-5 w-5" />
+                        <Instagram className="h-6 w-6" />
                       </Link>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                       <Link href="https://www.youtube.com/channel/UCjeRvtuFfZeA_qSgB82Pwng/featured" target="_blank">
-                        <Youtube className="h-5 w-5" />
+                        <Youtube className="h-6 w-6" />
                       </Link>
                     </Button>
                 </div>
