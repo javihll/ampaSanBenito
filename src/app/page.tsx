@@ -25,7 +25,7 @@ export default function Home() {
       <section className="relative w-full h-[60vh] md:h-[70vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/ampa-san-benito-v2.png"
+            src="/images/ampa-san-benito.jpg"
             alt="Children playing in a schoolyard"
             data-ai-hint="children schoolyard"
             fill
