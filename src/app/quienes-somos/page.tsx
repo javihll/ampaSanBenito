@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { Users, HelpCircle, Settings, Heart, Mail, CheckCircle, ListChecks, Target, BookOpen, Handshake, BarChart, Sprout, Milestone, Drama, Palmtree, Gamepad2, ShieldCheck, Paintbrush, Network, Thermometer, UserCog, Info } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
@@ -248,6 +249,17 @@ export default function QuienesSomosPage() {
              Un fin básico: la PARTICIPACIÓN de los PADRES Y MADRES en la EDUCACIÓN de sus hijos/as. Existe un ámbito individual y otro colectivo: los padres y madres deciden unirse voluntariamente para la consecución de determinados objetivos. La intervención colectiva es una garantía democrática.
             </p>
             </header>
+            
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/images/pages/organizacion.webp"
+                alt="Organización de la AMPA"
+                data-ai-hint="team meeting"
+                width={900}
+                height={506}
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
 
              <Card className="overflow-hidden shadow-lg mb-12">
                 <CardHeader>
