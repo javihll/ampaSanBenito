@@ -1,53 +1,7 @@
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { posts } from "@/lib/data";
-
-function PostContent({ content }: { content: string }) {
-  const imageRegex = /<Image [^>]*\/>/g;
-  const parts = content.split(imageRegex);
-  const matches = content.match(imageRegex) || [];
-
-  return (
-    <div className="prose prose-lg max-w-none text-muted-foreground">
-      {parts.map((part, index) => {
-        const imageMatch = matches[index];
-        let imageElement = null;
-        if (imageMatch) {
-            const srcMatch = imageMatch.match(/src="([^"]*)"/);
-            const altMatch = imageMatch.match(/alt="([^"]*)"/);
-            const widthMatch = imageMatch.match(/width={(\d+)}/);
-            const heightMatch = imageMatch.match(/height={(\d+)}/);
-            const hintMatch = imageMatch.match(/data-ai-hint="([^"]*)"/);
-
-            if (srcMatch && altMatch && widthMatch && heightMatch) {
-                imageElement = (
-                    <div className="my-4">
-                        <Image
-                            src={srcMatch[1]}
-                            alt={altMatch[1]}
-                            width={parseInt(widthMatch[1])}
-                            height={parseInt(heightMatch[1])}
-                            data-ai-hint={hintMatch ? hintMatch[1] : ''}
-                            className="rounded-lg"
-                        />
-                    </div>
-                );
-            }
-        }
-
-        return (
-          <React.Fragment key={index}>
-            <div dangerouslySetInnerHTML={{ __html: part }} />
-            {imageElement}
-          </React.Fragment>
-        );
-      })}
-    </div>
-  );
-}
-
 
 export default function HuertoPage() {
   return (
@@ -64,19 +18,37 @@ export default function HuertoPage() {
           </header>
 
           <div className="space-y-8">
-            {posts.map((post, index) => (
-              <Card key={index} className="overflow-hidden shadow-lg">
-                <CardHeader>
-                  <CardTitle>{post.title}</CardTitle>
-                  <CardDescription>
-                    Publicado el {post.date} por {post.author}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="prose prose-lg max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
-                </CardContent>
-              </Card>
-            ))}
+            {posts.map((post, index) => {
+              const imageRegex = /<Image [^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*width={(\d+)}[^>]*height={(\d+)}[^>]*data-ai-hint="([^"]*)"[^>]*\/>/g;
+              const imageMatch = imageRegex.exec(post.content);
+              const contentWithoutImage = post.content.replace(imageRegex, '');
+
+              return (
+                <Card key={index} className="overflow-hidden shadow-lg">
+                  <CardHeader>
+                    <CardTitle>{post.title}</CardTitle>
+                    <CardDescription>
+                      Publicado el {post.date} por {post.author}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="prose prose-lg max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: contentWithoutImage }} />
+                    {imageMatch && (
+                       <div className="my-4">
+                        <Image
+                            src={imageMatch[1]}
+                            alt={imageMatch[2]}
+                            width={parseInt(imageMatch[3])}
+                            height={parseInt(imageMatch[4])}
+                            data-ai-hint={imageMatch[5]}
+                            className="rounded-lg"
+                        />
+                       </div>
+                    )}
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </div>
