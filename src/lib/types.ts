@@ -27,9 +27,18 @@ export interface Service {
     icon: LucideIcon;
 }
 
+export interface PostImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  hint: string;
+}
+
 export interface Post {
     title: string;
     date: string;
     author: string;
     content: string;
+    image: PostImage | null;
 }

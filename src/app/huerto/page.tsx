@@ -18,37 +18,31 @@ export default function HuertoPage() {
           </header>
 
           <div className="space-y-8">
-            {posts.map((post, index) => {
-              const imageRegex = /<Image [^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*width={(\d+)}[^>]*height={(\d+)}[^>]*data-ai-hint="([^"]*)"[^>]*\/>/g;
-              const imageMatch = imageRegex.exec(post.content);
-              const contentWithoutImage = post.content.replace(imageRegex, '');
-
-              return (
-                <Card key={index} className="overflow-hidden shadow-lg">
-                  <CardHeader>
-                    <CardTitle>{post.title}</CardTitle>
-                    <CardDescription>
-                      Publicado el {post.date} por {post.author}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="prose prose-lg max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: contentWithoutImage }} />
-                    {imageMatch && (
-                       <div className="my-4">
-                        <Image
-                            src={imageMatch[1]}
-                            alt={imageMatch[2]}
-                            width={parseInt(imageMatch[3])}
-                            height={parseInt(imageMatch[4])}
-                            data-ai-hint={imageMatch[5]}
-                            className="rounded-lg"
-                        />
-                       </div>
-                    )}
-                  </CardContent>
-                </Card>
-              )
-            })}
+            {posts.map((post, index) => (
+              <Card key={index} className="overflow-hidden shadow-lg">
+                <CardHeader>
+                  <CardTitle>{post.title}</CardTitle>
+                  <CardDescription>
+                    Publicado el {post.date} por {post.author}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="prose prose-lg max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
+                  {post.image && (
+                     <div className="my-4">
+                      <Image
+                          src={post.image.src}
+                          alt={post.image.alt}
+                          width={post.image.width}
+                          height={post.image.height}
+                          data-ai-hint={post.image.hint}
+                          className="rounded-lg"
+                      />
+                     </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
