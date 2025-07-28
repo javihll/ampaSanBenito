@@ -18,14 +18,14 @@ export default function BicibusPage() {
             </p>
           </header>
 
-          <div className="my-8">
+          <div className="my-8 flex justify-center">
             <Image
               src="/images/pages/bicibus2.webp"
               alt="Niños y padres en el bicibús"
               data-ai-hint="children cycling"
-              width={1200}
-              height={675}
-              className="w-full h-auto rounded-lg shadow-lg"
+              width={900}
+              height={506}
+              className="w-3/4 h-auto rounded-lg shadow-lg"
             />
           </div>
 
