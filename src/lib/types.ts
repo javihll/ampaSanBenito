@@ -26,3 +26,10 @@ export interface Service {
     description: string;
     icon: LucideIcon;
 }
+
+export interface Post {
+    title: string;
+    date: string;
+    author: string;
+    content: string;
+}
