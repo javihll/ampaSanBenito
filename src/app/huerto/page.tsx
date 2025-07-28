@@ -17,6 +17,17 @@ export default function HuertoPage() {
             </p>
           </header>
 
+          <div className="my-8 flex justify-center">
+            <Image
+              src="/images/pages/huerto.webp"
+              alt="Huerto escolar"
+              data-ai-hint="school garden"
+              width={900}
+              height={506}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+
           <div className="space-y-8">
             {posts.map((post, index) => (
               <Card key={index} className="overflow-hidden shadow-lg">
