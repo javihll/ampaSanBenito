@@ -18,7 +18,7 @@ export const announcements: Announcement[] = [
 <p>¡OS ESPERAMOS!</p>
 <p>Grupo de Movilidad</p>
 `,
-    imageUrl: 'https://ampasanbenito.org/wp-content/uploads/2023/12/Cartel-bicibus-navideno-solidario_page-0001.jpg',
+    imageUrl: '/images/noticias/bicibus.png',
     date: '15 de Diciembre de 2023',
     author: 'irenecazanaampa',
   },
@@ -36,7 +36,7 @@ export const announcements: Announcement[] = [
 <p>Confiamos en que ésta será una vía más de transmisión de conocimiento y de ayuda para ellos.</p>
 <p>Grupo de Convivencia</p>
 `,
-    imageUrl: '/images/noticias/libros-acoso-escolar.jpeg',
+    imageUrl: '/images/noticias/nuevosLibros.webp',
     date: '15 de Diciembre de 2023',
     author: 'irenecazanaampa',
   },
@@ -55,7 +55,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>¡¡¡ MUCHAS GRACIAS POR INVOLUCRAROS EN CREAR UN ENTORNO SANO PARA TODOS NUESTROS HIJ@S!!!</p>
 <p>Comisión de Convivencia</p>
 `,
-    imageUrl: '/images/noticias/charla-acoso-escolar.jpeg',
+    imageUrl: '/images/noticias/tallerAcoso.png',
     date: '15 de Diciembre de 2023',
     author: 'irenecazanaampa',
   },
@@ -71,7 +71,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>La actividad ha resultado muy interesante y entretenida para grandes y peques. 👏🤗</p>
 <p>Un abrazo a todos y todas<br>Comisión de Huerto</p>
 `,
-    imageUrl: '/images/noticias/jornada-colaboracion.jpeg',
+    imageUrl: '/images/noticias/jornadaColaboracion.png',
     date: '15 de Noviembre de 2023',
     author: 'irenecazanaampa',
   },
@@ -105,7 +105,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>Si os apetece y podéis colaborar, podéis escribir un correo dejando vuestro número de móvil a sanbenito@ampasanbenito.org</p>
 <p>¡Nos vemos todos el martes!</p>
 `,
-    imageUrl: '/images/noticias/bizcochada-bienvenida.jpeg',
+    imageUrl: '/images/noticias/bizcochada.webp',
     date: '28 de Septiembre de 2023',
     author: 'irenecazanaampa',
   },
@@ -139,7 +139,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>Hace nada que nos estabamos despidiendo en la puerta del cole y ya tenemos aqui septiembre y el inicio del nuevo curso.<br>Damos un caluroso abrazo a las familias recién llegadas al colegio.</p>
 <p>Para estas nuevas familias, y todes en general, se adjunta toda la información importante para este inicio de curso, los servicios de conciliación para este curso 2023/2024 y de cómo haceros socias.</p>
 `,
-    imageUrl: '/images/noticias/nuevo-curso.jpeg',
+    imageUrl: '/images/noticias/bienvenidos.jpg',
     date: '6 de Septiembre de 2023',
     author: 'irenecazanaampa',
   },
@@ -168,7 +168,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>Por supuesto, cualquier ayuda siempre será bienvenida, ¡¡nunca hay suficientes manos!! Si podéis venir un ratito antes de las 17h o quedaros a recoger un poco después, os rogamos nos escribáis al correo sanbenito@ampasanbenito.org en estos días para que podamos organizarnos.</p>
 <p>¡Allí os esperamos!</p>
 `,
-    imageUrl: '/images/noticias/fiesta-fin-curso.jpeg',
+    imageUrl: '/images/noticias/fiestaFinCurso.png',
     date: '16 de Junio de 2023',
     author: 'irenecazanaampa',
   },
@@ -194,7 +194,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>El domingo 4 de junio, nuestro equipo de baloncesto ganó la final de la copa Primavera con un resultado de 41 a 30 frente al equipo DOSA (colegio Santo Domingo Savio).<br>El partido fue muy emocionante y disputado. Ambos equipos lo dieron todo en la cancha, pero finalmente el equipo rival no tuvo nada que hacer frente a nuestros chicos y chicas.<br>Damos las gracias a toda la afición que asistió con sus camisetas rojas a animar sin descanso todo el partido.</p>
 <p>🏆🏀¡¡Enhorabuena campeones!! 🏀🏆</p>
 `,
-    imageUrl: '/images/noticias/campeones-baloncesto.jpeg',
+    imageUrl: '/images/noticias/campeonesBaloncesto.jpeg',
     date: '7 de Junio de 2023',
     author: 'irenecazanaampa',
   },
@@ -210,7 +210,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>Os animamos a todas las familias a asistir al partido con alguna prenda roja, el color de la equipación, para darles todo nuestro apoyo y la más calurosa de las ovaciones.</p>
 <p>¡¡Pase lo que pase, ya son nuestras/os campeonas/es!!</p>
 `,
-    imageUrl: '/images/noticias/final-baloncesto.jpeg',
+    imageUrl: '/public/images/noticias/finalCopaPrimavera.jpg',
     date: '31 de Mayo de 2023',
     author: 'irenecazanaampa',
   },
@@ -223,7 +223,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>Queridas familias, hace unos meses hemos reactivado nuestros perfiles en las redes sociales y queremos animaros a que nos sigais.</p>
 <p>En ellas, además de publicar noticias sobre nuestras actividades en el cole, también compartimos otras noticias del exterior que consideramos pueden ser de vuestro interés: noticias del barrio, actividades culturales o cursos gratuitos, etc. No dejéis de estar enterados de todo!!</p>
 `,
-    imageUrl: '/images/noticias/redes-sociales.jpeg',
+    imageUrl: '/public/images/noticias/reactivacionRRSS.webp',
     date: '8 de Mayo de 2023',
     author: 'irenecazanaampa',
   },
@@ -239,7 +239,7 @@ Muchas gracias por vuestra implicación.</p>
 <p>Tendrá, también gratuitamente, el servicio de cuidado de vuestros hijos para que podáis asistir sin problema.</p>
 <p>¡No faltéis que será seguro muy interesante!</p>
 `,
-    imageUrl: '/images/noticias/taller-batch-cooking.jpeg',
+    imageUrl: '/public/images/noticias/tallerBatchCooking.webp',
     date: '2 de Mayo de 2023',
     author: 'irenecazanaampa',
   }
