@@ -250,17 +250,6 @@ export default function QuienesSomosPage() {
             </p>
             </header>
             
-            <div className="my-8 flex justify-center">
-              <Image
-                src="/images/pages/organizacion.webp"
-                alt="Organización de la AMPA"
-                data-ai-hint="team meeting"
-                width={900}
-                height={506}
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-
              <Card className="overflow-hidden shadow-lg mb-12">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
@@ -336,6 +325,18 @@ export default function QuienesSomosPage() {
                    </ul>
                 </CardContent>
               </Card>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/images/pages/organizacion.webp"
+                alt="Organización de la AMPA"
+                data-ai-hint="team meeting"
+                width={900}
+                height={506}
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
                <Alert variant="default" className="border-accent">
                 <BookOpen className="h-4 w-4" />
                 <AlertTitle className="text-accent font-bold">Estatutos AMPA San Benito</AlertTitle>
