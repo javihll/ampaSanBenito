@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -5,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -72,7 +73,7 @@ export default function Header() {
               height={40}
               className="bg-primary rounded-full"
             />
-          <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
+          <span className="hidden font-headline sm:inline-block font-bold">AMPA San Benito</span>
         </Link>
         
         <nav className="hidden md:flex gap-6 items-center">
@@ -97,6 +98,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+                <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
+                <SheetDescription className="sr-only">
+                    Navegación principal del sitio web
+                </SheetDescription>
                 <div className="flex flex-col h-full">
                     <SheetClose asChild>
                         <Link href="/" className="flex items-center gap-2 mb-6">
