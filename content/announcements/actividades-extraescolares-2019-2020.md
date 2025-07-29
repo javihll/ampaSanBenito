@@ -1,5 +1,5 @@
 ---
-id: 5
+id: 20
 title: 'Actividades Extraescolares 2019-2020'
 excerpt: 'Os adjuntamos un pdf donde podéis encontrar toda la información para las actividades extraescolares para este curso 2019-2020.'
 imageUrl: '/images/noticias/extraescolares.jpg'
