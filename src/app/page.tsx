@@ -1,4 +1,4 @@
-'use client';
+'use server';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,21 +8,10 @@ import { ArrowRight, Clock, MapPin } from 'lucide-react';
 import type { Announcement, Event } from '@/lib/types';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
-import { useEffect, useState } from 'react';
 
-export default function Home() {
-  const [announcements, setAnnouncements] = useState<(Omit<Announcement, 'content'>)[]>([]);
-  const [events, setEvents] = useState<Event[]>([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const announcementsData = await getSortedAnnouncementsData();
-      const eventsData = await getSortedEventsData();
-      setAnnouncements(announcementsData);
-      setEvents(eventsData);
-    }
-    fetchData();
-  }, []);
+export default async function Home() {
+  const announcements = await getSortedAnnouncementsData();
+  const events = await getSortedEventsData();
   
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
   const recentAnnouncements = announcements.slice(0, 6);
@@ -47,9 +36,9 @@ export default function Home() {
             <Image
               src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
               alt="AMPA San Benito Logo"
-              width={180}
-              height={180}
-              className="h-28 w-28 md:h-44 md:w-44"
+              width={200}
+              height={200}
+              className="h-32 w-32 md:h-48 md:w-48"
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
