@@ -1,11 +1,9 @@
-'use server';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
-import type { Announcement, Event } from '@/lib/types';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
 
@@ -34,11 +32,11 @@ export default async function Home() {
         <div className="relative z-20 flex flex-col items-center">
           <div className="bg-white/90 rounded-full p-4 md:p-6 shadow-2xl mb-6">
             <Image
-              src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
+              src="/images/logo-ampa.png"
               alt="AMPA San Benito Logo"
               width={300}
               height={300}
-              className="h-48 w-48 md:h-64 md:w-64"
+              className="h-72 w-72"
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">

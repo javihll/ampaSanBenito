@@ -7,6 +7,9 @@ import Footer from '@/components/layout/footer';
 export const metadata: Metadata = {
   title: 'San Benito AMPA Revitalized',
   description: 'Asociación de Madres y Padres de Alumnos del CEIP San Benito',
+  icons: {
+    icon: '/images/logo-ampa.png',
+  }
 };
 
 export default function RootLayout({

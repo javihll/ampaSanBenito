@@ -10,12 +10,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ampasanbenito.org',
-        port: '',
-        pathname: '/**',
-      },
        {
         protocol: 'https',
         hostname: 'placehold.co',
