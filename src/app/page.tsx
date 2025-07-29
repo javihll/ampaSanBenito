@@ -27,7 +27,7 @@ export default function Home() {
       });
   }, []);
 
-  const upcomingEvents = events.filter(e => new Date(e.date) >= new Date() && e.type === 'upcoming');
+  const upcomingEvents = events.filter(e => e.type === 'upcoming');
 
 
   const handleShowMore = () => {
