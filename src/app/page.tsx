@@ -36,9 +36,9 @@ export default async function Home() {
             <Image
               src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
               alt="AMPA San Benito Logo"
-              width={200}
-              height={200}
-              className="h-32 w-32 md:h-48 md:w-48"
+              width={300}
+              height={300}
+              className="h-48 w-48 md:h-64 md:w-64"
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
