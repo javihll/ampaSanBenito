@@ -2,7 +2,7 @@
 import type { Announcement, Event, Service, Post } from './types';
 import { BookOpen, Coffee, Gamepad2, GraduationCap, PartyPopper, Users, Utensils } from 'lucide-react';
 
-export const announcements: Announcement[] = [
+export const announcements: Omit<Announcement, 'content' | 'slug'>[] = [
  
 ];
 
