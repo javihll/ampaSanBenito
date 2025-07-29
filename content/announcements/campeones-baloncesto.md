@@ -2,7 +2,7 @@
 id: 17
 title: '¡¡¡CAMPEONES!!!'
 excerpt: 'Familias, ¡tenemos la COPA PRIMAVERA!'
-imageUrl: '/images/noticias/baloncesto.jpg'
+imageUrl: '/images/noticias/campeones-baloncesto.jpeg'
 date: '2023-06-07'
 author: 'irenecazanaampa'
 ---

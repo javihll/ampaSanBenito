@@ -2,7 +2,7 @@
 id: 21
 title: 'Taller de BATCH COOKING y planificación semanal'
 excerpt: 'El próximo lunes, 8 de mayo de 16h a 17h, realizaremos un taller de Batch Cooking y planificación de menús con la dietista-nutricionista Alicia Arenas.'
-imageUrl: '/images/noticias/batch-cooking.jpg'
+imageUrl: '/images/noticias/taller-batch-cooking.webp'
 date: '2023-05-02'
 author: 'irenecazanaampa'
 ---

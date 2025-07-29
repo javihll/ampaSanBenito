@@ -7,33 +7,7 @@ export const announcements: Omit<Announcement, 'content' | 'slug'>[] = [
 ];
 
 export const events: Event[] = [
-    {
-      id: 1,
-      title: 'Asamblea General de Socios',
-      date: '2024-06-15',
-      time: '10:00 - 12:00',
-      location: 'Salón de Actos',
-      description: 'Reunión anual para revisar cuentas y planificar el próximo curso.',
-      type: 'upcoming',
-    },
-    {
-      id: 2,
-      title: 'Fiesta Fin de Curso',
-      date: '2024-06-21',
-      time: '17:00 - 20:00',
-      location: 'Patio del Colegio',
-      description: '¡Juegos, música y diversión para despedir el año escolar!',
-      type: 'upcoming',
-    },
-    {
-        id: 3,
-        title: 'Chocolatada Solidaria',
-        date: '2023-12-22',
-        time: '16:30 - 18:00',
-        location: 'Comedor del Colegio',
-        description: 'Recaudación de fondos para proyectos benéficos.',
-        type: 'past',
-    },
+
 ];
 
 export const services: Service[] = [

@@ -2,7 +2,7 @@
 id: 2
 title: '¡No te pierdas la Fiesta de Fin de Curso!'
 excerpt: 'El próximo viernes 21 de junio celebraremos en el patio del colegio nuestra tradicional Fiesta de Fin de Curso. ¡Habrá juegos, música, y muchas sorpresas!'
-imageUrl: '/images/noticias/fiesta-fin-curso.jpg'
+imageUrl: '/images/noticias/fiesta-fin-curso.png'
 date: '2024-06-10'
 author: 'ampa-san-benito'
 ---

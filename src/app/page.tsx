@@ -5,25 +5,30 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
-import { events } from '@/lib/data';
 import { useState, useEffect } from 'react';
-import type { Announcement } from '@/lib/types';
+import type { Announcement, Event } from '@/lib/types';
 
 export default function Home() {
-  const upcomingEvents = events.filter(e => e.type === 'upcoming');
+  const [events, setEvents] = useState<Event[]>([]);
   const [announcements, setAnnouncements] = useState<Omit<Announcement, 'content'>[]>([]);
   const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
 
   useEffect(() => {
-    // This is a workaround to fetch the data on the client side
-    // as we cannot use the fs module directly in a client component.
-    // A better approach would be to fetch this from an API route or pass it as a prop from a server component.
     fetch('/api/announcements')
       .then(res => res.json())
       .then(data => {
         setAnnouncements(data);
       });
+    
+    fetch('/api/events')
+      .then(res => res.json())
+      .then(data => {
+        setEvents(data);
+      });
   }, []);
+
+  const upcomingEvents = events.filter(e => new Date(e.date) >= new Date() && e.type === 'upcoming');
+
 
   const handleShowMore = () => {
     setVisibleAnnouncements(announcements.length);

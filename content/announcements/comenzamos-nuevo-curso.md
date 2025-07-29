@@ -2,7 +2,7 @@
 id: 13
 title: '¡Comenzamos nuevo curso!'
 excerpt: 'Buenas familias, ¡ya estamos de vuelta! Hace nada que nos estabamos despidiendo en la puerta del cole y ya tenemos aqui septiembre y el inicio del nuevo curso.'
-imageUrl: '/images/noticias/nuevo-curso.jpg'
+imageUrl: '/images/noticias/bienvenidos.jpg'
 date: '2023-09-06'
 author: 'irenecazanaampa'
 ---

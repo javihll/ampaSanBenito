@@ -2,7 +2,7 @@
 id: 16
 title: 'INFORMACIÓN IMPORTANTE: BECAS COMEDOR'
 excerpt: 'Buenas familias, Os informamos que ya se pueden solicitar las becas del comedor para el próximo curso escolar.'
-imageUrl: '/images/noticias/comedor.jpg'
+imageUrl: '/images/noticias/becas-comedor.webp'
 date: '2023-06-08'
 author: 'irenecazanaampa'
 ---

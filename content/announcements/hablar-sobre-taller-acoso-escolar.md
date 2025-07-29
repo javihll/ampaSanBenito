@@ -2,7 +2,7 @@
 id: 8
 title: 'HABLAR SOBRE EL TALLER DE ACOSO ESCOLAR EN CASA'
 excerpt: 'Queridas familias, Vuestros hijos han participado estos días en el Taller sobre Acoso Escolar y creemos que es una gran oportunidad que podáis hablar de ello en casa ahora, que lo tienen muy reciente y aún estarán «procesando» toda la información.'
-imageUrl: '/images/noticias/taller-acoso.jpg'
+imageUrl: '/images/noticias/taller-acoso.png'
 date: '2023-12-15'
 author: 'irenecazanaampa'
 ---

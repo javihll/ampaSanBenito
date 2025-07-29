@@ -2,7 +2,7 @@
 id: 23
 title: 'Red escolar de intercambio de semillas'
 excerpt: 'El C.P. San Benito y sus alumnos están participando en la iniciativa Red escolar de intercambio de semillas. Gracias a éste y, guiados por la monitora del huerto escolar, Amal (educadora ambiental de Germinando) y los profesores, los alumnos están compartiendo con niños de otros centros educativos sus experiencias en los huertos y también están intercambiando algunas semillas.'
-imageUrl: '/images/noticias/intercambio-semillas.jpg'
+imageUrl: '/images/noticias/intercambio-semillas.webp'
 date: '2021-05-26'
 author: 'Patricia Zamorano'
 ---

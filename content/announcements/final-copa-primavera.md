@@ -2,7 +2,7 @@
 id: 18
 title: 'Final de la Copa de Primavera'
 excerpt: 'Familias, hoy estamos muy emocionados por nuestros chicas y chicos de Baloncesto, ¡¡el equipo del CEIP San Benito ha pasado a la final de la Copa Primavera!!'
-imageUrl: '/images/noticias/baloncesto.jpg'
+imageUrl: '/images/noticias/final-copa-primavera.jpg'
 date: '2023-05-31'
 author: 'irenecazanaampa'
 ---

@@ -2,7 +2,7 @@
 id: 11
 title: 'BIZCOCHADA DE BIENVENIDA'
 excerpt: 'Empezamos un nuevo año escolar y aprovechando que ya tenemos jornada escolar completa y han comenzado las actividades extraescolares, queremos retomar la bizcochada de bienvenida al nuevo curso que será el martes 3 de octubre de 17:00 a 19:00.'
-imageUrl: '/images/noticias/bizcochada.jpg'
+imageUrl: '/images/noticias/bizcochada.webp'
 date: '2023-09-28'
 author: 'irenecazanaampa'
 ---

@@ -2,7 +2,7 @@
 id: 12
 title: 'EXTRAESCOLARES 2023/2024'
 excerpt: '¡Hola familias! Seguimos poniendo en marcha este nuevo curso, ahora le toca a las actividades extraescolares. Os queremos hacer llegar la oferta de actividades extraescolares para este curso 2023-2024, esperamos se adapte a las necesidades e inquietudes de todos nuestros peques y familias.'
-imageUrl: '/images/noticias/extraescolares.jpg'
+imageUrl: '/images/noticias/extraescolares.webp'
 date: '2023-09-15'
 author: 'irenecazanaampa'
 ---

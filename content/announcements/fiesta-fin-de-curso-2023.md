@@ -2,7 +2,7 @@
 id: 15
 title: 'FIESTA FIN DE CURSO'
 excerpt: 'Queridas familias, ya llega el final del curso, y desde la AMPA queremos celebrarlo con todos vosotros.'
-imageUrl: '/images/noticias/fiesta-fin-curso.jpg'
+imageUrl: '/images/noticias/fiesta-fin-curso.png'
 date: '2023-06-16'
 author: 'irenecazanaampa'
 ---

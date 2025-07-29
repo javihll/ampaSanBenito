@@ -2,7 +2,7 @@
 id: 3
 title: 'Nuevos Socios y Renovaciones Curso 2024-2025'
 excerpt: '¡Ya está abierto el plazo para hacerse socio o renovar la cuota del AMPA para el próximo curso! Ayúdanos a seguir construyendo un colegio mejor.'
-imageUrl: '/images/noticias/hazte-socio.jpg'
+imageUrl: '/images/noticias/bienvenidos.jpg'
 date: '2024-09-02'
 author: 'ampa-san-benito'
 ---

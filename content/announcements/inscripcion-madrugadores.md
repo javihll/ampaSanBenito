@@ -2,7 +2,7 @@
 id: 14
 title: 'Inscripción de madrugadores'
 excerpt: 'Queridas familias, esperamos que estais teniendo un buen verano🏄. Desde el AMPA, ya estamos trabajando en el inicio de curso.'
-imageUrl: '/images/noticias/madrugadores.jpg'
+imageUrl: '/images/noticias/ampliacion.png'
 date: '2023-07-10'
 author: 'irenecazanaampa'
 ---

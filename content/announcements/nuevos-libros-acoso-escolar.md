@@ -2,7 +2,7 @@
 id: 7
 title: 'NUEVOS LIBROS SOBRE ACOSO ESCOLAR EN NUESTRA BIBLIOTECA'
 excerpt: 'Queridas familias, Hoy tenemos la alegría de informarnos, que como parte del proyecto sobre Acoso Escolar que estamos llevando a cabo desde la AMPA, se han adquirido algunos libros y cuentos sobre acoso escolar.'
-imageUrl: '/images/noticias/biblioteca.jpg'
+imageUrl: '/images/noticias/nuevos-libros.webp'
 date: '2023-12-15'
 author: 'irenecazanaampa'
 ---

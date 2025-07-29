@@ -2,7 +2,7 @@
 id: 6
 title: 'BICIBÚS NAVIDEÑO'
 excerpt: 'Hola, ya están las Navidades a la vuelta de la esquina y como cada año os queremos invitar al BICIBÚS ESPECIAL NAVIDEÑO que organizamos desde las AMPAS del CEIP San Benito y del CEIP Méjico.'
-imageUrl: '/images/noticias/bicibus.jpg'
+imageUrl: '/images/noticias/bicibus.png'
 date: '2023-12-15'
 author: 'irenecazanaampa'
 ---

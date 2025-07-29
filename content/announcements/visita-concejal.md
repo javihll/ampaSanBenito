@@ -2,7 +2,7 @@
 id: 24
 title: 'El Concejal Ángel Niño visitará las zonas peatonalizadas alrededor del San Benito'
 excerpt: 'El Concejal Presidente del Distrito de Ciudad Lineal, Ángel Niño, visitará el próximo jueves día 18, a las 8:30 horas, las zonas peatonalizadas en torno al Colegio San Benito.'
-imageUrl: '/images/noticias/peatonalizacion.jpg'
+imageUrl: '/images/noticias/zonas-peatonalizadas.webp'
 date: '2021-03-10'
 author: 'Patricia Zamorano'
 ---

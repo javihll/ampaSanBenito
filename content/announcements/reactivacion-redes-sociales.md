@@ -2,7 +2,7 @@
 id: 19
 title: 'Reactivacion de las redes sociales del AMPA'
 excerpt: 'Queridas familias, hace unos meses hemos reactivado nuestros perfiles en las redes sociales y queremos animaros a que nos sigais.'
-imageUrl: '/images/noticias/redes-sociales.jpg'
+imageUrl: '/images/noticias/reactivacion-rrss.webp'
 date: '2023-05-08'
 author: 'irenecazanaampa'
 ---

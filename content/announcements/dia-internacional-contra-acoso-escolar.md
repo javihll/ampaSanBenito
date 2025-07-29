@@ -2,7 +2,7 @@
 id: 10
 title: 'DÍA INTERNACIONAL CONTRA EL ACOSO ESCOLAR'
 excerpt: 'Hoy comienzan las Jornadas Ampa:”Todas y todos contra el acoso escolar”'
-imageUrl: '/images/noticias/no-acoso.jpg'
+imageUrl: '/images/noticias/acoso-escolar.webp'
 date: '2023-11-02'
 author: 'irenecazanaampa'
 ---
