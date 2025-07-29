@@ -1,3 +1,5 @@
+'use server';
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -7,7 +9,7 @@ import type { Announcement } from './types';
 
 const announcementsDirectory = path.join(process.cwd(), 'content/announcements');
 
-export function getSortedAnnouncementsData(): (Omit<Announcement, 'content'>)[] {
+export async function getSortedAnnouncementsData(): Promise<(Omit<Announcement, 'content'>)[]> {
   const fileNames = fs.readdirSync(announcementsDirectory);
   const allAnnouncementsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '');
@@ -31,7 +33,7 @@ export function getSortedAnnouncementsData(): (Omit<Announcement, 'content'>)[] 
   });
 }
 
-export function getAllAnnouncementSlugs() {
+export async function getAllAnnouncementSlugs() {
   const fileNames = fs.readdirSync(announcementsDirectory);
   return fileNames.map((fileName) => {
     return {

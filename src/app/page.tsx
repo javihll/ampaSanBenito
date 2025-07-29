@@ -7,35 +7,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import type { Announcement, Event } from '@/lib/types';
+import { getSortedAnnouncementsData } from '@/lib/announcements';
+import { getSortedEventsData } from '@/lib/events';
 
 export default function Home() {
-  const [events, setEvents] = useState<Event[]>([]);
-  const [announcements, setAnnouncements] = useState<Omit<Announcement, 'content'>[]>([]);
-  const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
+  const [allAnnouncements, setAllAnnouncements] = useState<(Omit<Announcement, 'content'>)[]>([]);
+  const [allEvents, setAllEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    fetch('/api/announcements')
-      .then(res => res.json())
-      .then(data => {
-        setAnnouncements(data);
-      });
-    
-    fetch('/api/events')
-      .then(res => res.json())
-      .then(data => {
-        setEvents(data);
-      });
+    async function fetchData() {
+      const announcements = await getSortedAnnouncementsData();
+      const events = await getSortedEventsData();
+      setAllAnnouncements(announcements);
+      setAllEvents(events);
+    }
+    fetchData();
   }, []);
 
-  const upcomingEvents = events.filter(e => e.type === 'upcoming');
+  const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
 
+  const upcomingEvents = allEvents.filter(e => e.type === 'upcoming');
 
   const handleShowMore = () => {
-    setVisibleAnnouncements(announcements.length);
+    setVisibleAnnouncements(allAnnouncements.length);
   };
   
-  const recentAnnouncements = announcements.slice(0, visibleAnnouncements);
-
+  const recentAnnouncements = allAnnouncements.slice(0, visibleAnnouncements);
 
   return (
     <div className="flex flex-col">
@@ -137,7 +134,7 @@ export default function Home() {
               </Card>
             ))}
           </div>
-          {visibleAnnouncements < announcements.length ? (
+          {visibleAnnouncements < allAnnouncements.length ? (
             <div className="text-center mt-12">
               <Button size="lg" variant="outline" onClick={handleShowMore}>
                   Ver entradas anteriores

@@ -15,23 +15,23 @@ import {
   PaginationPrevious,
   PaginationEllipsis,
 } from '@/components/ui/pagination';
+import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { useState, useEffect } from 'react';
 import type { Announcement } from '@/lib/types';
-
 
 const ITEMS_PER_PAGE = 6;
 
 export default function AnnouncementsPage() {
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get('page')) || 1;
-  const [announcements, setAnnouncements] = useState<Omit<Announcement, 'content'>[]>([]);
+  const [announcements, setAnnouncements] = useState<(Omit<Announcement, 'content'>)[]>([]);
 
   useEffect(() => {
-    fetch('/api/announcements')
-      .then(res => res.json())
-      .then(data => {
-        setAnnouncements(data);
-      });
+    async function fetchData() {
+      const sortedAnnouncements = await getSortedAnnouncementsData();
+      setAnnouncements(sortedAnnouncements);
+    }
+    fetchData();
   }, []);
 
   const totalPages = Math.ceil(announcements.length / ITEMS_PER_PAGE);

@@ -1,3 +1,5 @@
+'use server';
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -5,7 +7,7 @@ import type { Event } from './types';
 
 const eventsDirectory = path.join(process.cwd(), 'content/events');
 
-export function getSortedEventsData(): Event[] {
+export async function getSortedEventsData(): Promise<Event[]> {
   const fileNames = fs.readdirSync(eventsDirectory);
   const allEventsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '');
