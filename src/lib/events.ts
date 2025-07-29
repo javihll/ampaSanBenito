@@ -30,3 +30,26 @@ export async function getSortedEventsData(): Promise<Event[]> {
     }
   });
 }
+
+export async function getAllEventSlugs() {
+  const fileNames = fs.readdirSync(eventsDirectory);
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        slug: fileName.replace(/\.md$/, ''),
+      },
+    };
+  });
+}
+
+export async function getEventData(slug: string): Promise<Event> {
+    const fullPath = path.join(eventsDirectory, `${slug}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+  
+    return {
+      slug,
+      ...(matterResult.data as Omit<Event, 'slug'>),
+    };
+  }
+  

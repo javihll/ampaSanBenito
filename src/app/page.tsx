@@ -5,34 +5,27 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
-import { useState, useEffect } from 'react';
 import type { Announcement, Event } from '@/lib/types';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [allAnnouncements, setAllAnnouncements] = useState<(Omit<Announcement, 'content'>)[]>([]);
-  const [allEvents, setAllEvents] = useState<Event[]>([]);
+  const [announcements, setAnnouncements] = useState<(Omit<Announcement, 'content'>)[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
     async function fetchData() {
-      const announcements = await getSortedAnnouncementsData();
-      const events = await getSortedEventsData();
-      setAllAnnouncements(announcements);
-      setAllEvents(events);
+      const announcementsData = await getSortedAnnouncementsData();
+      const eventsData = await getSortedEventsData();
+      setAnnouncements(announcementsData);
+      setEvents(eventsData);
     }
     fetchData();
   }, []);
-
-  const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
-
-  const upcomingEvents = allEvents.filter(e => e.type === 'upcoming');
-
-  const handleShowMore = () => {
-    setVisibleAnnouncements(allAnnouncements.length);
-  };
   
-  const recentAnnouncements = allAnnouncements.slice(0, visibleAnnouncements);
+  const upcomingEvents = events.filter(e => e.type === 'upcoming');
+  const recentAnnouncements = announcements.slice(0, 6);
 
   return (
     <div className="flex flex-col">
@@ -54,9 +47,9 @@ export default function Home() {
             <Image
               src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
               alt="AMPA San Benito Logo"
-              width={160}
-              height={160}
-              className="h-24 w-24 md:h-40 md:w-40"
+              width={180}
+              height={180}
+              className="h-28 w-28 md:h-44 md:w-44"
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
@@ -134,21 +127,13 @@ export default function Home() {
               </Card>
             ))}
           </div>
-          {visibleAnnouncements < allAnnouncements.length ? (
-            <div className="text-center mt-12">
-              <Button size="lg" variant="outline" onClick={handleShowMore}>
-                  Ver entradas anteriores
-              </Button>
-            </div>
-           ) : (
-            <div className="text-center mt-12">
+           <div className="text-center mt-12">
               <Button size="lg" variant="outline" asChild>
                   <Link href="/anuncios">
-                      Ir al archivo de noticias
+                      Ver todas las noticias
                   </Link>
               </Button>
             </div>
-           )}
         </div>
       </section>
     </div>
