@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
@@ -22,11 +22,6 @@ export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const NavLink = ({ href, label }: { href: string; label: string }) => (
     <Link
       href={href}
@@ -41,25 +36,6 @@ export default function Header() {
       {label}
     </Link>
   );
-
-  if (!mounted) {
-    return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container flex h-16 items-center justify-between">
-                <Link href="/" className="flex items-center gap-2">
-                   <Image
-                      src="https://ampasanbenito.org/wp-content/uploads/2019/11/logo-ampa-png-circulo-blanco.png"
-                      alt="AMPA San Benito Logo"
-                      width={40}
-                      height={40}
-                      className="bg-primary rounded-full"
-                    />
-                  <span className="hidden font-bold sm:inline-block font-headline">AMPA San Benito</span>
-                </Link>
-            </div>
-        </header>
-    );
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
