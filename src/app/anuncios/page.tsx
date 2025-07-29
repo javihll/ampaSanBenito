@@ -15,13 +15,24 @@ import {
   PaginationPrevious,
   PaginationEllipsis,
 } from '@/components/ui/pagination';
-import { announcements } from '@/lib/data';
+import { useState, useEffect } from 'react';
+import type { Announcement } from '@/lib/types';
+
 
 const ITEMS_PER_PAGE = 6;
 
 export default function AnnouncementsPage() {
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get('page')) || 1;
+  const [announcements, setAnnouncements] = useState<Omit<Announcement, 'content'>[]>([]);
+
+  useEffect(() => {
+    fetch('/api/announcements')
+      .then(res => res.json())
+      .then(data => {
+        setAnnouncements(data);
+      });
+  }, []);
 
   const totalPages = Math.ceil(announcements.length / ITEMS_PER_PAGE);
 
@@ -127,7 +138,7 @@ export default function AnnouncementsPage() {
                 className="w-full h-48 object-cover"
               />
               <CardHeader>
-                <p className="text-sm text-muted-foreground">{announcement.date}</p>
+                <p className="text-sm text-muted-foreground">{new Date(announcement.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                 <CardTitle className="font-headline text-xl h-16">{announcement.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">

@@ -1,18 +1,16 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { announcements } from '@/lib/data';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Calendar, User } from 'lucide-react';
 import PageSummary from '@/components/page-summary';
+import { getAnnouncementData, getAllAnnouncementSlugs } from '@/lib/announcements';
 
 export async function generateStaticParams() {
-  return announcements.map((announcement) => ({
-    slug: announcement.slug,
-  }));
+  const paths = getAllAnnouncementSlugs();
+  return paths.map(p => ({ slug: p.params.slug }));
 }
 
-export default function AnnouncementPage({ params }: { params: { slug: string } }) {
-  const announcement = announcements.find((a) => a.slug === params.slug);
+export default async function AnnouncementPage({ params }: { params: { slug: string } }) {
+  const announcement = await getAnnouncementData(params.slug);
 
   if (!announcement) {
     notFound();
@@ -29,7 +27,7 @@ export default function AnnouncementPage({ params }: { params: { slug: string } 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>{announcement.date}</span>
+                <span>{new Date(announcement.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />

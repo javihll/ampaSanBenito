@@ -5,12 +5,25 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
-import { announcements, events } from '@/lib/data';
-import { useState } from 'react';
+import { events } from '@/lib/data';
+import { useState, useEffect } from 'react';
+import type { Announcement } from '@/lib/types';
 
 export default function Home() {
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
+  const [announcements, setAnnouncements] = useState<Omit<Announcement, 'content'>[]>([]);
   const [visibleAnnouncements, setVisibleAnnouncements] = useState(6);
+
+  useEffect(() => {
+    // This is a workaround to fetch the data on the client side
+    // as we cannot use the fs module directly in a client component.
+    // A better approach would be to fetch this from an API route or pass it as a prop from a server component.
+    fetch('/api/announcements')
+      .then(res => res.json())
+      .then(data => {
+        setAnnouncements(data);
+      });
+  }, []);
 
   const handleShowMore = () => {
     setVisibleAnnouncements(announcements.length);
@@ -103,7 +116,7 @@ export default function Home() {
                   className="w-full h-48 object-cover"
                 />
                 <CardHeader>
-                  <p className="text-sm text-muted-foreground">{announcement.date}</p>
+                  <p className="text-sm text-muted-foreground">{new Date(announcement.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                   <CardTitle className="font-headline text-xl h-16">{announcement.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
