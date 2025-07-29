@@ -23,16 +23,11 @@ export default function RootLayout({
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap"
           as="style"
-          onLoad={
-            "this.onload=null;this.rel='stylesheet'"
-          }
         />
-        <noscript>
-          <link
+        <link
             href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap"
             rel="stylesheet"
-          />
-        </noscript>
+        />
       </head>
       <body className="font-body antialiased">
         <div className="relative flex min-h-screen flex-col bg-background">
