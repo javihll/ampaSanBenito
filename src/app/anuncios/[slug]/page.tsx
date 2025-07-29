@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Calendar, User } from 'lucide-react';
-import PageSummary from '@/components/page-summary';
 import { getAnnouncementData, getAllAnnouncementSlugs } from '@/lib/announcements';
 
 export async function generateStaticParams() {
@@ -50,10 +49,6 @@ export default async function AnnouncementPage({ params }: { params: { slug: str
             className="prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: announcement.content }}
           />
-
-          <div className="mt-12 border-t pt-8">
-             <PageSummary content={announcement.content} />
-          </div>
 
         </article>
       </div>
