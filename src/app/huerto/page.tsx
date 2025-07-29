@@ -37,7 +37,7 @@ export default async function HuertoPage() {
                 <CardHeader>
                   <CardTitle>{post.title}</CardTitle>
                   <CardDescription>
-                    Publicado el {post.date} por {post.author}
+                    Publicado el {new Date(post.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })} por {post.author}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
