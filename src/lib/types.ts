@@ -13,6 +13,7 @@ export interface Announcement {
 
 export interface Event {
   id: number;
+  slug: string;
   title: string;
   date: string;
   time: string;
@@ -36,6 +37,7 @@ export interface PostImage {
 }
 
 export interface Post {
+    slug: string;
     title: string;
     date: string;
     author: string;

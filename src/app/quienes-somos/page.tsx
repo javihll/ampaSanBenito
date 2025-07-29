@@ -153,9 +153,6 @@ export default function QuienesSomosPage() {
                 <p>Hola familias,</p>
                 <p>Ya estamos otro año en fechas de las Jornadas de puertas abiertas en el colegio.</p>
                 <p>Para todas aquellas familias que sereis nuevas o las que ya estais, pero no conoceis todo lo que se hace dentro del AMPA, os traemos esta información para que podais conocer más de este grupo de padres y madres que trabajan duro para mejorar y dinamizar nuestro colegio.</p>
-                <div className="my-4">
-                    <iframe src="https://ampasanbenito.org/wp-content/uploads/2024/03/folleto-diptico-que-es-el-ampa-del-cole-1.pdf" width="100%" height="500px" className="border rounded-lg"></iframe>
-                </div>
                  <Button asChild variant="link" className="p-0 h-auto">
                     <Link href="https://ampasanbenito.org/wp-content/uploads/2024/03/folleto-diptico-que-es-el-ampa-del-cole-1.pdf" target="_blank">
                         Abrir folleto en una nueva pestaña

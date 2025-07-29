@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
-import { posts } from "@/lib/data";
+import { getSortedPostsData } from "@/lib/posts";
 
-export default function HuertoPage() {
+export default async function HuertoPage() {
+  const posts = await getSortedPostsData();
+  
   return (
     <div className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-4">
@@ -25,6 +27,7 @@ export default function HuertoPage() {
               width={900}
               height={506}
               className="w-full h-auto rounded-lg shadow-lg"
+              priority
             />
           </div>
 
