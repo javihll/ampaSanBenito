@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'San Benito AMPA Revitalized',
   description: 'Asociación de Madres y Padres de Alumnos del CEIP San Benito',
   icons: {
-    icon: '/images/logo-ampa.svg',
+    icon: '/favicon.svg',
   }
 };
 
