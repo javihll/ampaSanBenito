@@ -7,9 +7,6 @@ import Footer from '@/components/layout/footer';
 export const metadata: Metadata = {
   title: 'San Benito AMPA Revitalized',
   description: 'Asociación de Madres y Padres de Alumnos del CEIP San Benito',
-  icons: {
-    icon: '/favicon.svg',
-  }
 };
 
 export default function RootLayout({
@@ -20,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
