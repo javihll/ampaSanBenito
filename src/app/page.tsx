@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
        {/* Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
+      <section className="relative w-full h-[90vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
@@ -34,9 +34,9 @@ export default async function Home() {
             <Image
               src="/images/logo-ampa.png"
               alt="AMPA San Benito Logo"
-              width={300}
-              height={300}
-              className="h-72 w-72"
+              width={350}
+              height={350}
+              className="h-80 w-80"
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
