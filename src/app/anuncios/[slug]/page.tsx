@@ -4,7 +4,7 @@ import { Calendar, User } from 'lucide-react';
 import { getAnnouncementData, getAllAnnouncementSlugs } from '@/lib/announcements';
 
 export async function generateStaticParams() {
-  const paths = getAllAnnouncementSlugs();
+  const paths = await getAllAnnouncementSlugs();
   return paths.map(p => ({ slug: p.params.slug }));
 }
 
