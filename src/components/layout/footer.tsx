@@ -57,6 +57,9 @@ export default function Footer() {
               <li><Link href="/extraescolares" className="hover:text-primary transition-colors">Extraescolares</Link></li>
               <li><Link href="/hazte-socio" className="hover:text-primary transition-colors">Hazte Socio</Link></li>
               <li><Link href="/contacto" className="hover:text-primary transition-colors">Contacto</Link></li>
+               <li><Link href="/aviso-legal" className="hover:text-primary transition-colors">Aviso Legal</Link></li>
+              <li><Link href="/politica-de-privacidad" className="hover:text-primary transition-colors">Política de Privacidad</Link></li>
+              <li><Link href="/cookies" className="hover:text-primary transition-colors">Política de Cookies</Link></li>
             </ul>
           </div>
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
