@@ -34,9 +34,9 @@ export default async function Home() {
             <Image
               src="/images/logo-ampa.png"
               alt="AMPA San Benito Logo"
-              width={350}
-              height={350}
-              className="h-80 w-80"
+              width={200}
+              height={200}
+              className="h-48 w-48"
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
