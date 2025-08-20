@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Clock, MapPin } from 'lucide-react';
+import { ArrowRight, Clock, MapPin, Sparkles } from 'lucide-react';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
 
@@ -21,33 +21,36 @@ export default async function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
-            alt="Children playing in a schoolyard"
+            alt="Niños jugando en el patio del colegio"
             data-ai-hint="children schoolyard"
             fill
             className="object-cover"
             priority
           />
-           <div className="absolute inset-0 bg-primary/70 z-10" />
+           <div className="absolute inset-0 bg-primary/80 z-10" />
         </div>
         <div className="relative z-20 flex flex-col items-center">
-          <div className="bg-white/90 rounded-full p-4 md:p-6 shadow-2xl mb-6">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 md:p-5 shadow-2xl mb-6">
             <Image
               src="/images/logo-ampa.png"
               alt="AMPA San Benito Logo"
-              width={200}
-              height={200}
-              className="h-48 w-48"
+              width={160}
+              height={160}
+              className="h-24 w-24 md:h-40 md:w-40"
               priority
             />
           </div>
-          <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
+          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter drop-shadow-lg">
             AMPA San Benito
           </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl">
-            Trabajando juntos por la educación y el bienestar de nuestros hijos.
+          <p className="mt-4 max-w-2xl text-lg md:text-xl font-semibold drop-shadow-md">
+            Trabajando juntos por una educación divertida, inclusiva y llena de aventuras.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/hazte-socio">¡Hazte Socio!</Link>
+          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full text-lg font-bold px-8 py-6 shadow-lg transform hover:scale-105 transition-transform">
+            <Link href="/hazte-socio">
+              <Sparkles className="mr-2 h-5 w-5" />
+              ¡Únete a la aventura!
+            </Link>
           </Button>
         </div>
       </section>
