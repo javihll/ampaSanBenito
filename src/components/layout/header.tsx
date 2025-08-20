@@ -19,7 +19,6 @@ export default function Header() {
             height={40}
             className="bg-primary rounded-full"
           />
-          <span className="hidden font-headline sm:inline-block font-bold">AMPA San Benito</span>
         </Link>
         
         <HeaderClient />

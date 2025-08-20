@@ -37,6 +37,7 @@ export default async function Home() {
               width={200}
               height={200}
               className="h-48 w-48"
+              priority
             />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter">
