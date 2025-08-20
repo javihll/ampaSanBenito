@@ -1,4 +1,3 @@
-
 'use client';
 import React, { Suspense, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
@@ -21,6 +20,31 @@ import type { Announcement } from '@/lib/types';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const ITEMS_PER_PAGE = 6;
+
+function LoadingSkeleton() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => (
+        <Card key={i} className="flex flex-col overflow-hidden shadow-lg">
+          <Skeleton className="w-full h-48" />
+          <CardHeader>
+            <Skeleton className="h-4 w-1/3" />
+            <Skeleton className="h-6 w-full" />
+            <Skeleton className="h-6 w-2/3" />
+          </CardHeader>
+          <CardContent>
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-full mt-2" />
+            <Skeleton className="h-4 w-1/2 mt-2" />
+          </CardContent>
+          <div className="p-6 pt-0">
+            <Skeleton className="h-5 w-24" />
+          </div>
+        </Card>
+      ))}
+    </div>
+  );
+}
 
 function AnnouncementsContent() {
   const searchParams = useSearchParams();
@@ -118,28 +142,7 @@ function AnnouncementsContent() {
   };
 
   if (loading) {
-     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => (
-            <Card key={i} className="flex flex-col overflow-hidden shadow-lg">
-              <Skeleton className="w-full h-48" />
-              <CardHeader>
-                <Skeleton className="h-4 w-1/3" />
-                <Skeleton className="h-6 w-full" />
-                 <Skeleton className="h-6 w-2/3" />
-              </CardHeader>
-              <CardContent>
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-full mt-2" />
-                <Skeleton className="h-4 w-1/2 mt-2" />
-              </CardContent>
-              <div className="p-6 pt-0">
-                 <Skeleton className="h-5 w-24" />
-              </div>
-            </Card>
-          ))}
-        </div>
-     );
+     return <LoadingSkeleton />;
   }
 
   return (
@@ -191,31 +194,6 @@ function AnnouncementsContent() {
         </Pagination>
       </div>
     </>
-  );
-}
-
-function LoadingSkeleton() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => (
-        <Card key={i} className="flex flex-col overflow-hidden shadow-lg">
-          <Skeleton className="w-full h-48" />
-          <CardHeader>
-            <Skeleton className="h-4 w-1/3" />
-            <Skeleton className="h-6 w-full" />
-            <Skeleton className="h-6 w-2/3" />
-          </CardHeader>
-          <CardContent>
-            <Skeleton className="h-4 w-full" />
-            <Skeleton className="h-4 w-full mt-2" />
-            <Skeleton className="h-4 w-1/2 mt-2" />
-          </CardContent>
-          <div className="p-6 pt-0">
-            <Skeleton className="h-5 w-24" />
-          </div>
-        </Card>
-      ))}
-    </div>
   );
 }
 
