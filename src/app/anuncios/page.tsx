@@ -1,5 +1,6 @@
 'use client';
-import React, { Suspense, useSearchParams } from 'next/navigation';
+import { Suspense, useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,8 +15,6 @@ import {
   PaginationPrevious,
   PaginationEllipsis,
 } from '@/components/ui/pagination';
-import { getSortedAnnouncementsData } from '@/lib/announcements';
-import { useState, useEffect } from 'react';
 import type { Announcement } from '@/lib/types';
 import { Skeleton } from '@/components/ui/skeleton';
 
@@ -55,7 +54,8 @@ function AnnouncementsContent() {
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
-      const sortedAnnouncements = await getSortedAnnouncementsData();
+      const res = await fetch('/api/announcements');
+      const sortedAnnouncements = await res.json();
       setAnnouncements(sortedAnnouncements);
       setLoading(false);
     }
