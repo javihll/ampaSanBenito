@@ -19,7 +19,7 @@ export interface Event {
   time: string;
   location: string;
   description: string;
-  type: 'upcoming' | 'recent' | 'past';
+  type: 'upcoming' | 'past';
 }
 
 export interface Service {
