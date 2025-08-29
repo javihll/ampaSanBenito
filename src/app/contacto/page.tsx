@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Mail, MapPin, Phone, Twitter, Facebook, Instagram, Youtube, Users } from "lucide-react";
+import Image from "next/image";
 
 export default function ContactoPage() {
   return (
@@ -16,6 +17,17 @@ export default function ContactoPage() {
               Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de los siguientes canales.
             </p>
           </header>
+
+          <div className="my-8 flex justify-center">
+            <Image
+                src="/images/pages/contacto.webp"
+                alt="Contacto"
+                data-ai-hint="contact us"
+                width={900}
+                height={506}
+                className="w-1/2 h-auto rounded-lg shadow-lg"
+            />
+           </div>
 
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>

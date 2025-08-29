@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ListChecks, UserPlus, Euro, FileText, Bell, Users } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import Image from "next/image";
 
 export default function HazteSocioPage() {
   return (
@@ -14,6 +15,17 @@ export default function HazteSocioPage() {
               ¿Cómo hacerte socio/a?
             </h1>
           </header>
+
+          <div className="my-8 flex justify-center">
+            <Image
+                src="/images/pages/socios.webp"
+                alt="Hazte Socio"
+                data-ai-hint="community members"
+                width={900}
+                height={506}
+                className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
 
           <Card className="overflow-hidden shadow-lg">
             <CardHeader className="bg-secondary">

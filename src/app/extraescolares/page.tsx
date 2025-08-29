@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Download, FileText, Calendar, Users, Info } from "lucide-react";
+import Image from "next/image";
 
 export default function ExtraescolaresPage() {
   return (
@@ -16,6 +17,17 @@ export default function ExtraescolaresPage() {
               Toda la información sobre la oferta de actividades para el nuevo curso.
             </p>
           </header>
+
+          <div className="my-8 flex justify-center">
+            <Image
+                src="/images/pages/extraescolares.webp"
+                alt="Actividades Extraescolares"
+                data-ai-hint="children activities"
+                width={900}
+                height={506}
+                className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
 
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>

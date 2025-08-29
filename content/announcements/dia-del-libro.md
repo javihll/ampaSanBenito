@@ -2,7 +2,7 @@
 id: 5
 title: '¡Celebramos el Día del Libro!'
 excerpt: 'El próximo 23 de abril, unete a nosotros para una jornada llena de cuentacuentos, talleres de marcapáginas y un mercadillo de intercambio de libros.'
-imageUrl: 'https://picsum.photos/600/400'
+imageUrl: '/images/noticias/libros-infantiles.webp'
 date: '2025-04-15'
 author: 'ampa-san-benito'
 ---
