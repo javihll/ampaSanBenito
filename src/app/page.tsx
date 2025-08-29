@@ -1,17 +1,29 @@
+
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { ArrowRight, Clock, MapPin, Sparkles, PartyPopper, GraduationCap } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { ArrowRight, Clock, MapPin, Sparkles, PartyPopper, GraduationCap, Users } from 'lucide-react';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
-import { Users } from 'lucide-react';
+import Autoplay from "embla-carousel-autoplay"
+import * as React from "react"
+import { useEffect, useState } from 'react';
+import type { Event } from '@/lib/types';
 
-export default async function Home() {
-  const announcements = await getSortedAnnouncementsData();
-  const events = await getSortedEventsData();
+
+export default function Home() {
+  const [announcements, setAnnouncements] = useState<Awaited<ReturnType<typeof getSortedAnnouncementsData>>>([]);
+  const [events, setEvents] = useState<Event[]>([]);
   
+  useEffect(() => {
+    getSortedAnnouncementsData().then(setAnnouncements);
+    getSortedEventsData().then(setEvents);
+  }, []);
+
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
   const recentAnnouncements = announcements.slice(0, 6);
 
@@ -22,6 +34,10 @@ export default async function Home() {
     'Jornada de Deporte en Familia': PartyPopper,
     'default': PartyPopper,
   };
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
 
   return (
     <div className="flex flex-col">
@@ -63,13 +79,15 @@ export default async function Home() {
           </Button>
 
           {upcomingEvents.length > 0 && (
-            <div className="mt-12 w-full max-w-sm md:max-w-3xl mx-auto">
+            <div className="mt-12 w-full max-w-sm md:max-w-md mx-auto">
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Próximos Eventos</h2>
               <Carousel
+                plugins={[plugin.current]}
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
                 opts={{
                   align: "center",
-                  loop: upcomingEvents.length > (upcomingEvents.length === 1 ? 1 : 2),
-                  dragFree: false,
+                  loop: upcomingEvents.length > 1,
                 }}
                 className="w-full"
               >
@@ -77,8 +95,8 @@ export default async function Home() {
                   {upcomingEvents.map((event) => {
                     const Icon = eventIcons[event.title] || eventIcons.default;
                     return (
-                      <CarouselItem key={event.id} className={upcomingEvents.length > 1 ? "md:basis-1/2" : "basis-full"}>
-                          <Card className="bg-background/80 border-border backdrop-blur-md text-left text-foreground overflow-hidden h-full">
+                      <CarouselItem key={event.id}>
+                          <Card className="bg-background/50 border-border backdrop-blur-md text-left text-foreground overflow-hidden h-full">
                             <CardHeader className="flex flex-row items-center gap-4 p-4">
                               <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-3 w-20 h-20 text-center">
                                   <Icon className="h-6 w-6 mb-1 text-primary" />
@@ -107,12 +125,6 @@ export default async function Home() {
                     );
                   })}
                 </CarouselContent>
-                 {upcomingEvents.length > 2 && (
-                    <>
-                        <CarouselPrevious className="hidden md:flex" />
-                        <CarouselNext className="hidden md:flex" />
-                    </>
-                 )}
               </Carousel>
             </div>
           )}
