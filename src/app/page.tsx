@@ -25,7 +25,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
        {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
+      <section className="relative w-full min-h-screen text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
@@ -68,7 +68,7 @@ export default async function Home() {
                 {upcomingEvents.map((event) => {
                   const Icon = eventIcons[event.title] || eventIcons.default;
                   return (
-                    <Card key={event.id} className="bg-background/20 backdrop-blur-md border-white/30 text-left text-foreground overflow-hidden">
+                    <Card key={event.id} className="bg-background/50 border-border backdrop-blur-md text-left text-foreground overflow-hidden">
                       <CardHeader className="flex flex-row items-center gap-4 p-4">
                         <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-3 w-20 h-20 text-center">
                             <Icon className="h-6 w-6 mb-1" />
