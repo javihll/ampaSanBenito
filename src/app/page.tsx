@@ -70,7 +70,7 @@ export default function Home() {
           />
            <div className="absolute inset-0 bg-primary/60 z-10" />
         </div>
-        <div className="relative z-20 flex flex-col items-center pt-24 pb-12">
+        <div className="relative z-20 flex flex-col items-center pt-12 pb-12">
           <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 md:p-5 shadow-2xl mb-6">
             <Image
               src="/images/logo-ampa.png"
@@ -116,7 +116,7 @@ export default function Home() {
                           <Card className="bg-background/50 border-border backdrop-blur-md text-left text-foreground overflow-hidden h-full">
                             <CardHeader className="flex flex-row items-center gap-4 p-4">
                               <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-3 w-20 h-20 text-center">
-                                  <Icon className="h-6 w-6 mb-1 text-primary" />
+                                  <Icon className="h-6 w-6 mb-1 text-primary-foreground" />
                                   <span className="text-2xl font-bold font-headline">{new Date(event.date).getDate()}</span>
                                   <span className="text-sm uppercase">{new Date(event.date).toLocaleString('es-ES', { month: 'short' })}</span>
                               </div>
