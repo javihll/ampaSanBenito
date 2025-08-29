@@ -70,7 +70,7 @@ export default function Home() {
           />
            <div className="absolute inset-0 bg-primary/60 z-10" />
         </div>
-        <div className="relative z-20 flex flex-col items-center pt-6 pb-12">
+        <div className="relative z-20 flex flex-1 flex-col items-center pt-6 pb-12">
           <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 md:p-5 shadow-2xl mb-6">
             <Image
               src="/images/logo-ampa.png"
@@ -95,7 +95,7 @@ export default function Home() {
           </Button>
 
           {upcomingEvents.length > 0 && (
-            <div className="mt-12 w-full max-w-sm md:max-w-md mx-auto">
+            <div className="mt-20 w-full max-w-sm md:max-w-md mx-auto">
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 text-center">Próximos Eventos</h2>
               <Carousel
                 setApi={setApi}
