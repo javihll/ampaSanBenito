@@ -3,7 +3,7 @@ title: "La AMPA del San Benito te lleva al huerto"
 date: "2017-11-20"
 author: "Elena"
 image: 
-  src: "/images/noticias/taller-huerto.jpg"
+  src: "/images/huerto/taller-huerto.jpg"
   alt: "Taller huerto"
   width: 600
   height: 400

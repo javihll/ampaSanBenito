@@ -3,7 +3,7 @@ title: "Red escolar de intercambio de semillas"
 date: "2021-05-26"
 author: "Patricia Zamorano"
 image: 
-  src: "/images/noticias/intercambio-semillas.jpg"
+  src: "/images/huerto/semillas-huerto.webp"
   alt: "Red escolar de semillas"
   width: 600
   height: 400
