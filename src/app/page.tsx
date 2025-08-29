@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
        {/* Hero Section */}
-      <section className="relative w-full min-h-screen text-primary-foreground flex flex-col justify-center items-center p-4 overflow-hidden">
+      <section className="relative w-full min-h-screen text-primary-foreground flex flex-col items-center p-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
