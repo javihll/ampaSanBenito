@@ -1,3 +1,4 @@
+
 import type { Service, Post } from './types';
 import { BookOpen, Coffee, GraduationCap, PartyPopper, Users, Utensils } from 'lucide-react';
 
