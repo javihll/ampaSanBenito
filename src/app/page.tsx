@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import { ArrowRight, Clock, MapPin, Sparkles, PartyPopper, GraduationCap, Users } from 'lucide-react';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
@@ -18,6 +18,22 @@ import type { Event } from '@/lib/types';
 export default function Home() {
   const [announcements, setAnnouncements] = useState<Awaited<ReturnType<typeof getSortedAnnouncementsData>>>([]);
   const [events, setEvents] = useState<Event[]>([]);
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
   
   useEffect(() => {
     getSortedAnnouncementsData().then(setAnnouncements);
@@ -42,7 +58,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
        {/* Hero Section */}
-      <section className="relative w-full min-h-screen text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
+      <section className="relative w-full min-h-screen text-primary-foreground flex flex-col justify-center items-center p-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
@@ -59,8 +75,8 @@ export default function Home() {
             <Image
               src="/images/logo-ampa.png"
               alt="AMPA San Benito Logo"
-              width={160}
-              height={160}
+              width={48}
+              height={48}
               className="h-24 w-24 md:h-40 md:w-40"
               priority
             />
@@ -82,6 +98,7 @@ export default function Home() {
             <div className="mt-12 w-full max-w-sm md:max-w-md mx-auto">
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Próximos Eventos</h2>
               <Carousel
+                setApi={setApi}
                 plugins={[plugin.current]}
                 onMouseEnter={plugin.current.stop}
                 onMouseLeave={plugin.current.reset}
@@ -95,7 +112,7 @@ export default function Home() {
                   {upcomingEvents.map((event) => {
                     const Icon = eventIcons[event.title] || eventIcons.default;
                     return (
-                      <CarouselItem key={event.id}>
+                      <CarouselItem key={event.id} className="basis-full">
                           <Card className="bg-background/50 border-border backdrop-blur-md text-left text-foreground overflow-hidden h-full">
                             <CardHeader className="flex flex-row items-center gap-4 p-4">
                               <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-3 w-20 h-20 text-center">
@@ -126,6 +143,19 @@ export default function Home() {
                   })}
                 </CarouselContent>
               </Carousel>
+               {api && count > 1 && (
+                <div className="flex justify-center gap-2 mt-4">
+                  {Array.from({ length: count }).map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => api.scrollTo(index)}
+                      className={`h-2 w-6 rounded-full ${
+                        current === index + 1 ? 'bg-primary' : 'bg-primary/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
