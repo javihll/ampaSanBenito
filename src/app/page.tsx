@@ -75,16 +75,16 @@ export default function Home() {
             <Image
               src="/images/logo-ampa.png"
               alt="AMPA San Benito Logo"
-              width={48}
-              height={48}
+              width={160}
+              height={160}
               className="h-24 w-24 md:h-40 md:w-40"
               priority
             />
           </div>
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter drop-shadow-lg">
+          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter drop-shadow-lg max-w-4xl text-center">
             AMPA San Benito
           </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl font-semibold drop-shadow-md">
+          <p className="mt-4 max-w-4xl text-lg md:text-xl font-semibold drop-shadow-md text-center">
             Trabajando juntos por una educación divertida, inclusiva y llena de aventuras.
           </p>
           <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full text-lg font-bold px-8 py-6 shadow-lg transform hover:scale-105 transition-transform">
@@ -96,7 +96,7 @@ export default function Home() {
 
           {upcomingEvents.length > 0 && (
             <div className="mt-12 w-full max-w-sm md:max-w-md mx-auto">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Próximos Eventos</h2>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 text-center">Próximos Eventos</h2>
               <Carousel
                 setApi={setApi}
                 plugins={[plugin.current]}
