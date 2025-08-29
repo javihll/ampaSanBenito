@@ -2,9 +2,10 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 import { getSortedPostsData } from "@/lib/posts";
+import type { Post } from '@/lib/types';
 
 export default async function HuertoPage() {
-  const posts = await getSortedPostsData();
+  const posts: Post[] = await getSortedPostsData();
   
   return (
     <div className="bg-background py-12 md:py-20">
@@ -41,19 +42,19 @@ export default async function HuertoPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="prose prose-lg max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
                   {post.image && (
-                     <div className="my-4">
+                     <div className="mb-6">
                       <Image
                           src={post.image.src}
                           alt={post.image.alt}
                           width={post.image.width}
                           height={post.image.height}
                           data-ai-hint={post.image.hint}
-                          className="rounded-lg"
+                          className="rounded-lg w-full h-auto"
                       />
                      </div>
                   )}
+                  <div className="prose prose-lg max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
                 </CardContent>
               </Card>
             ))}
