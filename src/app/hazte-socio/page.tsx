@@ -58,7 +58,7 @@ export default function HazteSocioPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
                 <Euro className="h-8 w-8 text-primary" />
-                <span>Cuotas de familia socia (curso 2024-2025)</span>
+                <span>Cuotas de familia socia (curso 2025-2026)</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -101,7 +101,7 @@ export default function HazteSocioPage() {
             </CardHeader>
             <CardContent className="p-6 space-y-4">
               <p className="text-muted-foreground">
-                Por favor, enviad la documentación necesaria a lo largo del mes de <strong>septiembre del 2024</strong> a la siguiente dirección de correo electrónico: <a href="mailto:sanbenito@ampasanbenito.org" className="text-primary hover:underline">sanbenito@ampasanbenito.org</a>
+                Por favor, enviad la documentación necesaria a lo largo del mes de <strong>septiembre del 2025</strong> a la siguiente dirección de correo electrónico: <a href="mailto:sanbenito@ampasanbenito.org" className="text-primary hover:underline">sanbenito@ampasanbenito.org</a>
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                 <li>Justificante de la demanda de empleo</li>

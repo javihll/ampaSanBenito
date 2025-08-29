@@ -11,7 +11,7 @@ export default function ExtraescolaresPage() {
         <div className="max-w-4xl mx-auto space-y-12">
           <header className="text-center">
             <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">
-              Actividades Extraescolares 2024-2025
+              Actividades Extraescolares 2025-2026
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Toda la información sobre la oferta de actividades para el nuevo curso.
@@ -38,7 +38,7 @@ export default function ExtraescolaresPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Buenos días familias, os adjuntamos un pdf donde podéis encontrar toda la información para las actividades extraescolares para este curso 2024-2025. Darán comienzo el día <strong>martes 1 de octubre</strong> y se desarrollarán hasta el día <strong>viernes 30 de mayo</strong>, en horario de 16:00 a 17:00.
+                Buenos días familias, os adjuntamos un pdf donde podéis encontrar toda la información para las actividades extraescolares para este curso 2025-2026. Darán comienzo el día <strong>martes 1 de octubre</strong> y se desarrollarán hasta el día <strong>viernes 30 de mayo</strong>, en horario de 16:00 a 17:00.
               </p>
               <p className="text-muted-foreground">
                 El plazo de inscripción para las actividades abarca desde el <strong>viernes 13 de septiembre hasta el domingo 22 de septiembre</strong>, ambos inclusive.

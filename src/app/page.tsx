@@ -3,9 +3,10 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { ArrowRight, Clock, MapPin, Sparkles, Users, PartyPopper, GraduationCap } from 'lucide-react';
+import { ArrowRight, Clock, MapPin, Sparkles, PartyPopper, GraduationCap } from 'lucide-react';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
 import { getSortedEventsData } from '@/lib/events';
+import { Users } from 'lucide-react';
 
 export default async function Home() {
   const announcements = await getSortedAnnouncementsData();
@@ -66,9 +67,9 @@ export default async function Home() {
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Próximos Eventos</h2>
               <Carousel
                 opts={{
-                  align: upcomingEvents.length > 2 ? "start" : "center",
-                  loop: upcomingEvents.length > 2,
-                  dragFree: upcomingEvents.length > 2,
+                  align: "center",
+                  loop: upcomingEvents.length > (upcomingEvents.length === 1 ? 1 : 2),
+                  dragFree: false,
                 }}
                 className="w-full"
               >
@@ -76,11 +77,11 @@ export default async function Home() {
                   {upcomingEvents.map((event) => {
                     const Icon = eventIcons[event.title] || eventIcons.default;
                     return (
-                      <CarouselItem key={event.id} className="md:basis-1/2">
+                      <CarouselItem key={event.id} className={upcomingEvents.length > 1 ? "md:basis-1/2" : "basis-full"}>
                           <Card className="bg-background/80 border-border backdrop-blur-md text-left text-foreground overflow-hidden h-full">
                             <CardHeader className="flex flex-row items-center gap-4 p-4">
                               <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-3 w-20 h-20 text-center">
-                                  <Icon className="h-6 w-6 mb-1 text-accent" />
+                                  <Icon className="h-6 w-6 mb-1 text-primary" />
                                   <span className="text-2xl font-bold font-headline">{new Date(event.date).getDate()}</span>
                                   <span className="text-sm uppercase">{new Date(event.date).toLocaleString('es-ES', { month: 'short' })}</span>
                               </div>
