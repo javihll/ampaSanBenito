@@ -25,7 +25,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
        {/* Hero Section */}
-      <section className="relative w-full h-[90vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
+      <section className="relative w-full min-h-[90vh] text-primary-foreground flex flex-col justify-center items-center text-center p-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
@@ -37,7 +37,7 @@ export default async function Home() {
           />
            <div className="absolute inset-0 bg-primary/60 z-10" />
         </div>
-        <div className="relative z-20 flex flex-col items-center">
+        <div className="relative z-20 flex flex-col items-center pt-24 pb-12">
           <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 md:p-5 shadow-2xl mb-6">
             <Image
               src="/images/logo-ampa.png"
@@ -60,41 +60,44 @@ export default async function Home() {
               ¡Únete a la aventura!
             </Link>
           </Button>
-        </div>
-      </section>
 
-      {/* Events Section */}
-      <section className="py-12 md:py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Próximos Eventos</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            {upcomingEvents.map((event) => {
-              const Icon = eventIcons[event.title] || eventIcons.default;
-              return (
-                <Card key={event.id} className="flex flex-col md:flex-row items-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-4 w-full md:w-32 mb-4 md:mb-0 md:mr-6 text-center">
-                    <Icon className="h-10 w-10 mb-2" />
-                    <span className="text-4xl font-bold font-headline">{new Date(event.date).getDate()}</span>
-                    <span className="text-lg">{new Date(event.date).toLocaleString('es-ES', { month: 'short' })}</span>
-                  </div>
-                  <div className="flex-grow text-center md:text-left">
-                    <h3 className="font-headline text-2xl font-semibold">{event.title}</h3>
-                    <p className="text-muted-foreground mt-1">{event.description}</p>
-                    <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-muted-foreground mt-3">
-                      <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4 text-accent" />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="h-4 w-4 text-accent" />
-                        <span>{event.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
+          {upcomingEvents.length > 0 && (
+            <div className="mt-12 w-full max-w-4xl mx-auto">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8">Próximos Eventos</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {upcomingEvents.map((event) => {
+                  const Icon = eventIcons[event.title] || eventIcons.default;
+                  return (
+                    <Card key={event.id} className="bg-background/20 backdrop-blur-md border-white/30 text-left text-foreground overflow-hidden">
+                      <CardHeader className="flex flex-row items-center gap-4 p-4">
+                        <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-3 w-20 h-20 text-center">
+                            <Icon className="h-6 w-6 mb-1" />
+                            <span className="text-2xl font-bold font-headline">{new Date(event.date).getDate()}</span>
+                            <span className="text-sm uppercase">{new Date(event.date).toLocaleString('es-ES', { month: 'short' })}</span>
+                        </div>
+                        <div>
+                            <CardTitle className="font-headline text-lg mb-1">{event.title}</CardTitle>
+                            <p className="text-sm text-foreground/80">{event.description}</p>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="p-4 pt-0">
+                         <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-foreground/90">
+                            <div className="flex items-center gap-2">
+                                <Clock className="h-4 w-4 text-accent" />
+                                <span>{event.time}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <MapPin className="h-4 w-4 text-accent" />
+                                <span>{event.location}</span>
+                            </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

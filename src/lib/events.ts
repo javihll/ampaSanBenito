@@ -22,13 +22,15 @@ export async function getSortedEventsData(): Promise<Event[]> {
     } as Event;
   });
 
-  return allEventsData.sort((a, b) => {
-    if (a.date < b.date) {
+  const sortedEvents = allEventsData.sort((a, b) => {
+    if (new Date(a.date) < new Date(b.date)) {
       return 1;
     } else {
       return -1;
     }
   });
+
+  return sortedEvents.slice(0, 2);
 }
 
 export async function getAllEventSlugs() {
