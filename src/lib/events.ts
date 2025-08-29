@@ -30,7 +30,7 @@ export async function getSortedEventsData(): Promise<Event[]> {
     }
   });
 
-  return sortedEvents.slice(0, 2);
+  return sortedEvents.slice(0, 4);
 }
 
 export async function getAllEventSlugs() {
