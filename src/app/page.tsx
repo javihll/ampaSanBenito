@@ -105,6 +105,7 @@ export default function Home() {
                 opts={{
                   align: "center",
                   loop: upcomingEvents.length > 1,
+                  watchDrag: upcomingEvents.length > 1,
                 }}
                 className="w-full"
               >
