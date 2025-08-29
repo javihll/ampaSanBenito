@@ -66,8 +66,9 @@ export default async function Home() {
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Próximos Eventos</h2>
               <Carousel
                 opts={{
-                  align: upcomingEvents.length > 1 ? "start" : "center",
-                  loop: upcomingEvents.length > 1,
+                  align: upcomingEvents.length > 2 ? "start" : "center",
+                  loop: upcomingEvents.length > 2,
+                  dragFree: upcomingEvents.length > 2,
                 }}
                 className="w-full"
               >
@@ -91,11 +92,11 @@ export default async function Home() {
                             <CardContent className="p-4 pt-0">
                               <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-foreground/90">
                                   <div className="flex items-center gap-2">
-                                      <Clock className="h-4 w-4 text-accent" />
+                                      <Clock className="h-4 w-4 text-primary" />
                                       <span>{event.time}</span>
                                   </div>
                                   <div className="flex items-center gap-2">
-                                      <MapPin className="h-4 w-4 text-accent" />
+                                      <MapPin className="h-4 w-4 text-primary" />
                                       <span>{event.location}</span>
                                   </div>
                               </div>
