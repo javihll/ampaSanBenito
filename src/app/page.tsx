@@ -70,7 +70,7 @@ export default function Home() {
           />
            <div className="absolute inset-0 bg-primary/60 z-10" />
         </div>
-        <div className="relative z-20 flex flex-col items-center pt-12 pb-12">
+        <div className="relative z-20 flex flex-col items-center pt-6 pb-12">
           <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 md:p-5 shadow-2xl mb-6">
             <Image
               src="/images/logo-ampa.png"
