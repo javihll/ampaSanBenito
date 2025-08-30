@@ -25,7 +25,7 @@ export default function ExtraescolaresPage() {
                 data-ai-hint="children activities"
                 width={900}
                 height={506}
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-1/2 h-auto rounded-lg shadow-lg"
             />
           </div>
 
