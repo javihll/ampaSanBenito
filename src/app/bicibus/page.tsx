@@ -18,17 +18,6 @@ export default function BicibusPage() {
             </p>
           </header>
 
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/images/pages/bicibus2.webp"
-              alt="Niños y padres en el bicibús"
-              data-ai-hint="children cycling"
-              width={900}
-              height={506}
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
-
           <Card className="overflow-hidden shadow-lg">
             <CardHeader>
                 <CardTitle className="flex items-center gap-3">
@@ -54,6 +43,17 @@ export default function BicibusPage() {
                 </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
+              <div className="my-4 flex justify-center">
+                <Image
+                  src="/images/pages/bicibus2.webp"
+                  alt="Niños y padres en el bicibús"
+                  data-ai-hint="children cycling"
+                  width={900}
+                  height={506}
+                  className="w-full md:w-2/3 mx-auto h-auto rounded-lg shadow-lg mb-6"
+                />
+              </div>
+
               <p>En aras de mejorar la movilidad en el entorno del colegio, fomentar el uso de la bicicleta con trayectos seguros y en grupo como alternativa al coche y hacer un poco de ejercicio físico de forma divertida, os proponemos subir al bici-bus del San Benito.</p>
               
               <h3 className="font-headline text-lg font-semibold text-foreground">Pero, ¿qué es eso de un bici-bus escolar?</h3>

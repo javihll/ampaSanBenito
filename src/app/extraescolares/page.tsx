@@ -20,7 +20,7 @@ export default function ExtraescolaresPage() {
 
           <div className="my-8 flex justify-center">
             <Image
-                src="/images/pages/extraescolares.webp"
+                src="/images/pages/extraescolares.jpg"
                 alt="Actividades Extraescolares"
                 data-ai-hint="children activities"
                 width={900}
