@@ -2,6 +2,26 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Calendar, User } from 'lucide-react';
 import { getAnnouncementData, getAllAnnouncementSlugs } from '@/lib/announcements';
+import type { Metadata } from 'next';
+
+type Props = {
+  params: { slug: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const announcement = await getAnnouncementData(params.slug);
+
+  if (!announcement) {
+    return {
+      title: "Anuncio no encontrado",
+    }
+  }
+ 
+  return {
+    title: announcement.title,
+    description: announcement.excerpt,
+  }
+}
 
 export async function generateStaticParams() {
   const paths = await getAllAnnouncementSlugs();
