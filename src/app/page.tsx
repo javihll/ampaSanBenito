@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import { ArrowRight, Clock, MapPin, Sparkles, PartyPopper, GraduationCap, Users } from 'lucide-react';
 import { getSortedAnnouncementsData } from '@/lib/announcements';
-import { getSortedEventsData } from '@/lib/events';
 import Autoplay from "embla-carousel-autoplay"
 import * as React from "react"
 import { useEffect, useState } from 'react';
@@ -36,8 +35,13 @@ export default function Home() {
   }, [api])
   
   useEffect(() => {
+    async function fetchEvents() {
+        const res = await fetch('/api/events');
+        const eventData = await res.json();
+        setEvents(eventData);
+    }
     getSortedAnnouncementsData().then(setAnnouncements);
-    getSortedEventsData().then(setEvents);
+    fetchEvents();
   }, []);
 
   const upcomingEvents = events.filter(e => e.type === 'upcoming');
@@ -56,9 +60,9 @@ export default function Home() {
   )
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
        {/* Hero Section */}
-      <section className="relative w-full min-h-screen text-primary-foreground flex flex-col items-center p-4 overflow-hidden">
+      <section className="relative w-full text-primary-foreground flex flex-col items-center p-4 overflow-hidden flex-1">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/ampa-san-benito.jpg"
