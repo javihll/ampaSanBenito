@@ -3,7 +3,7 @@ id: 1
 title: '¡Estrenamos Nueva Página Web!'
 excerpt: 'Hemos renovado nuestra web para ofrecer una mejor experiencia a todas las familias. ¡Descubre todas las novedades y encuentra la información que necesitas de forma más fácil y rápida!'
 imageUrl: '/images/noticias/nueva-web.png'
-date: '2025-07-29'
+date: '2025-09-03'
 author: 'ampa-san-benito'
 ---
 
