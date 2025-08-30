@@ -37,21 +37,25 @@ function SocialLinks() {
         <>
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://x.com/ampa_sanbenito" target="_blank">
+                    <span className="sr-only">Twitter</span>
                     <Twitter className="h-6 w-6" />
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.facebook.com/LaAmpadelSanBenito/" target="_blank">
+                     <span className="sr-only">Facebook</span>
                     <Facebook className="h-6 w-6" />
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.instagram.com/ampa_sanbenito/" target="_blank">
+                     <span className="sr-only">Instagram</span>
                     <Instagram className="h-6 w-6" />
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.youtube.com/channel/UCjeRvtuFfZeA_qSgB82Pwng/featured" target="_blank">
+                     <span className="sr-only">Youtube</span>
                     <Youtube className="h-6 w-6" />
                 </Link>
             </Button>
