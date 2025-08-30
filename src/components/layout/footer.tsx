@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-headline font-semibold mb-4">Contacto</h4>
+            <h2 className="font-headline font-semibold mb-4">Contacto</h2>
             <ul className="space-y-2 text-sm">
               <li>C/ Juan Pérez Zúñiga 36</li>
               <li>28027 Madrid</li>
@@ -49,7 +49,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-headline font-semibold mb-4">Enlaces de Interés</h4>
+            <h2 className="font-headline font-semibold mb-4">Enlaces de Interés</h2>
             <ul className="space-y-2 text-sm">
               <li><Link href="/quienes-somos" className="hover:text-primary transition-colors">Quiénes Somos</Link></li>
               <li><Link href="/huerto" className="hover:text-primary transition-colors">Huerto</Link></li>
@@ -63,7 +63,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-headline font-semibold mb-4">Boletín de Noticias</h4>
+            <h2 className="font-headline font-semibold mb-4">Boletín de Noticias</h2>
             <p className="text-sm mb-2">Recibe las últimas noticias y eventos en tu correo.</p>
             <form className="flex w-full max-w-sm items-center space-x-2">
               <Input type="email" placeholder="Email" className="bg-background"/>
